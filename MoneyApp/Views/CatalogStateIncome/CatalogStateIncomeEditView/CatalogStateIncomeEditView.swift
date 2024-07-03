@@ -21,17 +21,14 @@ struct CatalogStateIncomeEditView: View {
                 
                 VStack(alignment: .leading)  {
                     
-                    TextField(text: $viewModel.cdCatalogStateIncome.name.defaultValue("")) {
-                        Text("Наименование")
-                    }
-                    
-                    Text("Наименование")
+                    CatalogStateIncomeEditNameView(name: $viewModel.cdCatalogStateIncome.name.defaultValue(""))
                     
                 }
                 
             }
             
         }
+        .navigationTitle("Доход")
         .toolbar {
             ToolbarItem {
                 Button(action: {
@@ -50,6 +47,9 @@ struct CatalogStateIncomeEditView: View {
     }
 }
 
-//#Preview {
-//    CatalogStateIncomeEditView()
-//}
+#Preview {
+    let viewModel = CatalogStateIncomeEditViewModel(id: CoreDataStack.cdCatalogStateIncomePreview!.objectID, coreData: CoreDataStack.previewStack)
+    return NavigationStack {
+        CatalogStateIncomeEditView(viewModel: viewModel)
+    }
+}

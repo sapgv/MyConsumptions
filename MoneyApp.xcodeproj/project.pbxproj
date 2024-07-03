@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */; };
+		10A4DC5A2C35C532000392E9 /* CatalogStateIncomeEditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC592C35C532000392E9 /* CatalogStateIncomeEditNameView.swift */; };
 		10E90A732BBBE6B50049C929 /* MoneyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E90A722BBBE6B50049C929 /* MoneyAppApp.swift */; };
 		10E90A752BBBE6B50049C929 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E90A742BBBE6B50049C929 /* MainView.swift */; };
 		10E90A772BBBE6B60049C929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E90A762BBBE6B60049C929 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackPreview.swift; sourceTree = "<group>"; };
+		10A4DC592C35C532000392E9 /* CatalogStateIncomeEditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogStateIncomeEditNameView.swift; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MoneyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E90A722BBBE6B50049C929 /* MoneyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAppApp.swift; sourceTree = "<group>"; };
 		10E90A742BBBE6B50049C929 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				10E90A9B2BBBED0A0049C929 /* CoreData + Extensions.swift */,
 				10E90A992BBBED0A0049C929 /* CoreDataStack.Log.swift */,
 				10E90A9D2BBBED0A0049C929 /* CoreDataStack.swift */,
+				10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */,
 				10E90A9A2BBBED0A0049C929 /* SaveStatus.swift */,
 				10E90A9C2BBBED0A0049C929 /* StoreType.swift */,
 			);
@@ -182,6 +187,7 @@
 			children = (
 				10E90A972BBBEC9C0049C929 /* CatalogStateIncomeEditViewModel.swift */,
 				10E90A952BBBEC230049C929 /* CatalogStateIncomeEditView.swift */,
+				10A4DC592C35C532000392E9 /* CatalogStateIncomeEditNameView.swift */,
 			);
 			path = CatalogStateIncomeEditView;
 			sourceTree = "<group>";
@@ -264,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A4DC5A2C35C532000392E9 /* CatalogStateIncomeEditNameView.swift in Sources */,
+				10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */,
 				10E90A902BBBEA880049C929 /* ObjectType.swift in Sources */,
 				10E90A982BBBEC9C0049C929 /* CatalogStateIncomeEditViewModel.swift in Sources */,
 				10E90A9F2BBBED0A0049C929 /* SaveStatus.swift in Sources */,

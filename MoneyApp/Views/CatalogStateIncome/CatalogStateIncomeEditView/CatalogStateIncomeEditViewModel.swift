@@ -16,9 +16,9 @@ final class CatalogStateIncomeEditViewModel: ObservableObject {
     
     private let viewContext: NSManagedObjectContext
     
-    init(id: NSManagedObjectID? = nil) {
+    init(id: NSManagedObjectID? = nil, coreData: ICoreDataStack = Model.coreData) {
         
-        self.viewContext = Model.coreData.createContextFromCoordinator(concurrencyType: .mainQueueConcurrencyType)
+        self.viewContext = coreData.createContextFromCoordinator(concurrencyType: .mainQueueConcurrencyType)
         
         if let id = id, let cdCatalogStateIncome = self.viewContext.objectInContext(CDCatalogStateIncome.self, objectID: id) {
             self.cdCatalogStateIncome = cdCatalogStateIncome
