@@ -9,14 +9,15 @@ import SwiftUI
 
 struct CatalogStateIncomeListView: View {
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\CDCatalogStateIncome.name)]) private var list: FetchedResults<CDCatalogStateIncome>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) private var list: FetchedResults<CDCatalogStateIncome>
     
     var body: some View {
         
         List(list) { cdCatalogStateIncome in
             
-            Text(cdCatalogStateIncome.name ?? "")
-            
+            NavigationLink(value: Coordinator.CatalogStateIncomeListView.edit(objectID: cdCatalogStateIncome.objectID)) {
+                Text(cdCatalogStateIncome.name ?? "")
+            }
             
         }
         .toolbar {
@@ -33,7 +34,7 @@ struct CatalogStateIncomeListView: View {
             case .new:
                 let viewModel = CatalogStateIncomeEditViewModel()
                 CatalogStateIncomeEditView(viewModel: viewModel)
-            case let .cdCatalogStateIncome(objectID):
+            case let .edit(objectID):
                 let viewModel = CatalogStateIncomeEditViewModel(id: objectID)
                 CatalogStateIncomeEditView(viewModel: viewModel)
             }

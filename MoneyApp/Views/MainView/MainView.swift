@@ -34,9 +34,8 @@ struct MainView: View {
                 
                 switch route {
                 case .catalogStateIncome:
-                    CatalogStateIncomeListView()
+                    CatalogCommonListView<CDCatalogStateIncome>(title: ObjectType.catalogStateIncome.title)
                 }
-                
                 
             }
             

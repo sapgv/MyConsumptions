@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct CatalogStateIncomeEditView: View {
+
+    @EnvironmentObject var coordinator: Coordinator
     
     @StateObject var viewModel: CatalogStateIncomeEditViewModel
     
-    @EnvironmentObject var coordinator: Coordinator
+    @FocusState private var focusedField: CatalogStateIncomeEditView.FocusField?
     
     var body: some View {
         
@@ -21,8 +23,8 @@ struct CatalogStateIncomeEditView: View {
                 
                 VStack(alignment: .leading)  {
                     
-                    CatalogStateIncomeEditNameView(name: $viewModel.cdCatalogStateIncome.name.defaultValue(""))
-                    
+                    EditNameView(name: $viewModel.cdCatalogStateIncome.name.defaultValue(""))
+                        .focused($focusedField, equals: .name)
                 }
                 
             }
@@ -41,10 +43,20 @@ struct CatalogStateIncomeEditView: View {
         .onReceive(viewModel.saveCompletion) {
             self.coordinator.path.removeLast()
         }
-        
+        .onAppear(perform: {
+            self.focusedField = .name
+        })
         
         
     }
+}
+
+extension CatalogStateIncomeEditView {
+    
+    enum FocusField {
+        case name
+    }
+    
 }
 
 #Preview {

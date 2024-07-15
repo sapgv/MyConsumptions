@@ -23,7 +23,12 @@ extension Coordinator {
     
     enum CatalogStateIncomeListView: Hashable {
         case new
-        case cdCatalogStateIncome(objectID: NSManagedObjectID)
+        case edit(objectID: NSManagedObjectID)
+    }
+    
+    enum CatalogCommonListView: Hashable {
+        case new
+        case edit(objectID: NSManagedObjectID)
     }
     
 }
