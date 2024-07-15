@@ -24,3 +24,20 @@ extension CDCatalogName {
 extension CDCatalogStateIncome: CDCatalogName {
     
 }
+
+extension CDCatalogStateConsumption: CDCatalogName {
+    
+}
+
+extension CDCatalogContact: CDCatalogName {
+    
+}
+
+extension CDCatalogDebt: CDCatalogName {
+    
+}
+
+extension CDCatalogWallet: CDCatalogName {
+    
+}
+

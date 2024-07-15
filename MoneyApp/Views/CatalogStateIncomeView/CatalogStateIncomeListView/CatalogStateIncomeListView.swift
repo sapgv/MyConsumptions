@@ -27,7 +27,7 @@ struct CatalogStateIncomeListView: View {
                 }
             }
         }
-        .navigationTitle(ObjectType.catalogStateIncome.title)
+        .navigationTitle(ObjectType.catalogStateIncome.listTitle)
         .navigationDestination(for: Coordinator.CatalogStateIncomeListView.self, destination: { route in
             
             switch route {

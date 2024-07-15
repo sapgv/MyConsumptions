@@ -19,6 +19,10 @@ extension Coordinator {
     
     enum MainView {
         case catalogStateIncome
+        case catalogStateConsumption
+        case catalogContact
+        case catalogDebt
+        case catalogWallet
     }
     
     enum CatalogStateIncomeListView: Hashable {

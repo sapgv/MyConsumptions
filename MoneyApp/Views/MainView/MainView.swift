@@ -20,7 +20,23 @@ struct MainView: View {
                 Section {
                     
                     NavigationLink(value: Coordinator.MainView.catalogStateIncome) {
-                        Text(ObjectType.catalogStateIncome.title)
+                        Text(ObjectType.catalogStateIncome.listTitle)
+                    }
+                    
+                    NavigationLink(value: Coordinator.MainView.catalogStateConsumption) {
+                        Text(ObjectType.catalogStateConsumption.listTitle)
+                    }
+                    
+                    NavigationLink(value: Coordinator.MainView.catalogContact) {
+                        Text(ObjectType.catalogContact.listTitle)
+                    }
+                    
+                    NavigationLink(value: Coordinator.MainView.catalogDebt) {
+                        Text(ObjectType.catalogDebt.listTitle)
+                    }
+                    
+                    NavigationLink(value: Coordinator.MainView.catalogWallet) {
+                        Text(ObjectType.catalogWallet.listTitle)
                     }
                     
                     
@@ -34,7 +50,15 @@ struct MainView: View {
                 
                 switch route {
                 case .catalogStateIncome:
-                    CatalogCommonListView<CDCatalogStateIncome>(title: ObjectType.catalogStateIncome.title)
+                    CatalogCommonListView<CDCatalogStateIncome>(objectType: ObjectType.catalogStateIncome)
+                case .catalogStateConsumption:
+                    CatalogCommonListView<CDCatalogStateConsumption>(objectType: ObjectType.catalogStateConsumption)
+                case .catalogContact:
+                    CatalogCommonListView<CDCatalogContact>(objectType: ObjectType.catalogContact)
+                case .catalogDebt:
+                    CatalogCommonListView<CDCatalogDebt>(objectType: ObjectType.catalogDebt)
+                case .catalogWallet:
+                    CatalogCommonListView<CDCatalogWallet>(objectType: ObjectType.catalogWallet)
                 }
                 
             }

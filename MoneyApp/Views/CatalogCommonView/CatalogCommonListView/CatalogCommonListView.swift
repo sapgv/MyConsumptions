@@ -11,8 +11,8 @@ import CoreData
 struct CatalogCommonListView<T: CDCatalogName>: View {
     
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: T.sortKey, ascending: true)]) private var list: FetchedResults<T>
-    
-    var title: String
+
+    var objectType: ObjectType
     
     var body: some View {
         
@@ -30,16 +30,16 @@ struct CatalogCommonListView<T: CDCatalogName>: View {
                 }
             }
         }
-        .navigationTitle(title)
+        .navigationTitle(objectType.listTitle)
         .navigationDestination(for: Coordinator.CatalogCommonListView.self, destination: { route in
             
             switch route {
             case .new:
                 let viewModel = CatalogCommonEditViewModel<T>()
-                CatalogCommonEditView(viewModel: viewModel)
+                CatalogCommonEditView(viewModel: viewModel, objectType: objectType)
             case let .edit(objectID):
                 let viewModel = CatalogCommonEditViewModel<T>(id: objectID)
-                CatalogCommonEditView(viewModel: viewModel)
+                CatalogCommonEditView(viewModel: viewModel, objectType: objectType)
             }
             
         })
@@ -49,5 +49,5 @@ struct CatalogCommonListView<T: CDCatalogName>: View {
 }
 
 #Preview {
-    CatalogCommonListView<CDCatalogStateIncome>(title: ObjectType.catalogStateIncome.title)
+    CatalogCommonListView<CDCatalogStateIncome>(objectType: ObjectType.catalogStateIncome)
 }

@@ -16,6 +16,8 @@ struct CatalogCommonEditView<T: CDCatalogName>: View {
     
     @FocusState private var focusedField: CatalogCommonEditView.FocusField?
     
+    var objectType: ObjectType
+    
     var body: some View {
         
         List {
@@ -32,7 +34,7 @@ struct CatalogCommonEditView<T: CDCatalogName>: View {
             }
             
         }
-        .navigationTitle("Доход")
+        .navigationTitle(objectType.editTitle)
         .toolbar {
             ToolbarItem {
                 Button(action: {
@@ -65,6 +67,6 @@ extension CatalogCommonEditView {
 #Preview {
     let viewModel = CatalogCommonEditViewModel<CDCatalogStateIncome>(id: CoreDataStack.cdCatalogStateIncomePreview!.objectID, coreData: CoreDataStack.previewStack)
     return NavigationStack {
-        CatalogCommonEditView(viewModel: viewModel)
+        CatalogCommonEditView(viewModel: viewModel, objectType: ObjectType.catalogStateIncome)
     }
 }
