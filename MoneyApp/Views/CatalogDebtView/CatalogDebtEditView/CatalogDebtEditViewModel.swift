@@ -16,6 +16,8 @@ final class CatalogDebtEditViewModel: ObservableObject {
     
     private let viewContext: NSManagedObjectContext
     
+    private var anyCancellable: AnyCancellable? = nil
+    
     init(id: NSManagedObjectID? = nil, coreData: ICoreDataStack = Model.coreData) {
         
         self.viewContext = coreData.createContextFromCoordinator(concurrencyType: .mainQueueConcurrencyType)
@@ -25,6 +27,10 @@ final class CatalogDebtEditViewModel: ObservableObject {
         }
         else {
             self.cdCatalogDebt = CDCatalogDebt(context: self.viewContext)
+        }
+        
+        self.anyCancellable = self.cdCatalogDebt.objectWillChange.sink { [weak self] _ in
+            self?.objectWillChange.send()
         }
         
     }

@@ -10,6 +10,8 @@
 		106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */; };
 		1060120B2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */; };
 		1060120D2C4A815A006D3EF2 /* CatalogDebtContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120C2C4A815A006D3EF2 /* CatalogDebtContactView.swift */; };
+		1060120F2C4A8B88006D3EF2 /* DebtType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120E2C4A8B88006D3EF2 /* DebtType.swift */; };
+		106012112C4A8C4C006D3EF2 /* CDCatalogDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */; };
 		10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */; };
 		10A4DC5A2C35C532000392E9 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC592C35C532000392E9 /* EditNameView.swift */; };
 		10E90A732BBBE6B50049C929 /* MoneyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E90A722BBBE6B50049C929 /* MoneyAppApp.swift */; };
@@ -39,6 +41,8 @@
 		106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditView.swift; sourceTree = "<group>"; };
 		1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditViewModel.swift; sourceTree = "<group>"; };
 		1060120C2C4A815A006D3EF2 /* CatalogDebtContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtContactView.swift; sourceTree = "<group>"; };
+		1060120E2C4A8B88006D3EF2 /* DebtType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtType.swift; sourceTree = "<group>"; };
+		106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCatalogDebt.swift; sourceTree = "<group>"; };
 		10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackPreview.swift; sourceTree = "<group>"; };
 		10A4DC592C35C532000392E9 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MoneyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +201,7 @@
 				10E90A9A2BBBED0A0049C929 /* SaveStatus.swift */,
 				10E90A9C2BBBED0A0049C929 /* StoreType.swift */,
 				10FF93C12C44F97D00037C21 /* CDCatalogName.swift */,
+				106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			children = (
 				10E90A8F2BBBEA880049C929 /* ObjectType.swift */,
 				10E90AA32BBBED1B0049C929 /* Model.swift */,
+				1060120E2C4A8B88006D3EF2 /* DebtType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -345,12 +351,14 @@
 				10E90A982BBBEC9C0049C929 /* CatalogStateIncomeEditViewModel.swift in Sources */,
 				10E90A9F2BBBED0A0049C929 /* SaveStatus.swift in Sources */,
 				10FF93C02C44F91900037C21 /* CatalogCommonListView.swift in Sources */,
+				1060120F2C4A8B88006D3EF2 /* DebtType.swift in Sources */,
 				10E90A752BBBE6B50049C929 /* MainView.swift in Sources */,
 				10E90A732BBBE6B50049C929 /* MoneyAppApp.swift in Sources */,
 				1060120D2C4A815A006D3EF2 /* CatalogDebtContactView.swift in Sources */,
 				10E90AA12BBBED0A0049C929 /* StoreType.swift in Sources */,
 				106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */,
 				10E90AA22BBBED0A0049C929 /* CoreDataStack.swift in Sources */,
+				106012112C4A8C4C006D3EF2 /* CDCatalogDebt.swift in Sources */,
 				10E90AA42BBBED1B0049C929 /* Model.swift in Sources */,
 				10E90A8D2BBBE9010049C929 /* Model.xcdatamodeld in Sources */,
 				10E90A892BBBE89A0049C929 /* CatalogStateIncomeListView.swift in Sources */,

@@ -5,6 +5,7 @@
         <relationship name="cdDebts_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDCatalogDebt" inverseName="cdContact" inverseEntity="CDCatalogDebt"/>
     </entity>
     <entity name="CDCatalogDebt" representedClassName="CDCatalogDebt" syncable="YES" codeGenerationType="class">
+        <attribute name="debtType_" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="cdContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogContact" inverseName="cdDebts_" inverseEntity="CDCatalogContact"/>
     </entity>

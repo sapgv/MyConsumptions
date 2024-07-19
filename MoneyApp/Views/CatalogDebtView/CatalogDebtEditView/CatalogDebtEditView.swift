@@ -27,6 +27,23 @@ struct CatalogDebtEditView: View {
                     CatalogDebtContactView(name: viewModel.cdCatalogDebt.cdContact?.name)
                 }
                 
+                HStack(spacing: 8, content: {
+                    
+                    Text("Тип долга")
+                        .foregroundStyle(.secondary)
+                    
+                    Picker("", selection: $viewModel.cdCatalogDebt.debtType_) {
+                        ForEach(DebtType.allCases.map { $0.title }, id: \.self) { debtType in
+                            Text(debtType)
+                                .foregroundStyle(Color.red)
+                                .tag(Optional(debtType))
+                            
+                        }
+                    }
+                    .tint(.primary)
+                    
+                })
+                
             }
             
             Section {
