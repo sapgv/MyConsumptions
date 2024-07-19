@@ -1,18 +1,18 @@
 //
-//  CatalogStateIncomeEditViewModel.swift
+//  CatalogDebtEditViewModel.swift
 //  MoneyApp
 //
-//  Created by Grigory Sapogov on 02.04.2024.
+//  Created by Grigory Sapogov on 19.07.2024.
 //
 
 import CoreData
 import Combine
 
-final class CatalogStateIncomeEditViewModel: ObservableObject {
+final class CatalogDebtEditViewModel: ObservableObject {
     
     var saveCompletion: PassthroughSubject<Void, Never> = PassthroughSubject<Void, Never>()
     
-    var cdCatalogStateIncome: CDCatalogStateIncome
+    var cdCatalogDebt: CDCatalogDebt
     
     private let viewContext: NSManagedObjectContext
     
@@ -20,11 +20,11 @@ final class CatalogStateIncomeEditViewModel: ObservableObject {
         
         self.viewContext = coreData.createContextFromCoordinator(concurrencyType: .mainQueueConcurrencyType)
         
-        if let id = id, let cdCatalogStateIncome = self.viewContext.objectInContext(CDCatalogStateIncome.self, objectID: id) {
-            self.cdCatalogStateIncome = cdCatalogStateIncome
+        if let id = id, let cdCatalogDebt = self.viewContext.objectInContext(CDCatalogDebt.self, objectID: id) {
+            self.cdCatalogDebt = cdCatalogDebt
         }
         else {
-            self.cdCatalogStateIncome = CDCatalogStateIncome(context: self.viewContext)
+            self.cdCatalogDebt = CDCatalogDebt(context: self.viewContext)
         }
         
     }
@@ -42,6 +42,11 @@ final class CatalogStateIncomeEditViewModel: ObservableObject {
             
         }
         
+    }
+    
+    func updateContact(cdContact: CDCatalogContact) {
+        let cdContact = self.viewContext.objectInContext(CDCatalogContact.self, objectID: cdContact.objectID)
+        self.cdCatalogDebt.cdContact = cdContact
     }
     
 }

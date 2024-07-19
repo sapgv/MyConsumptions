@@ -47,8 +47,8 @@ struct CatalogStateIncomeEditView: View {
             self.focusedField = .name
         })
         
-        
     }
+    
 }
 
 extension CatalogStateIncomeEditView {

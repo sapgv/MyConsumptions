@@ -10,16 +10,47 @@ import CoreData
 
 struct CatalogCommonListView<T: CDCatalogName>: View {
     
+    @Environment(\.dismiss) var dismiss
+    
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: T.sortKey, ascending: true)]) private var list: FetchedResults<T>
 
     var objectType: ObjectType
+    
+    var selected: T?
+    
+    var selectAction: ((T) -> Void)?
     
     var body: some View {
         
         List(list) { catalog in
             
-            NavigationLink(value: Coordinator.CatalogCommonListView.edit(objectID: catalog.objectID)) {
-                Text(catalog.name ?? "")
+            if let selectAction = selectAction {
+                
+                HStack {
+                    Text(catalog.name ?? "")
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            dismiss()
+                            selectAction(catalog)
+                        }
+                    Spacer()
+                    if catalog.name == selected?.name {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(Color.blue)
+                    }
+                }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    self.selectAction?(catalog)
+                    dismiss()
+                }
+                
+                
+            }
+            else {
+                NavigationLink(value: Coordinator.CatalogCommonListView.edit(objectID: catalog.objectID)) {
+                    Text(catalog.name ?? "")
+                }
             }
             
         }
@@ -35,14 +66,28 @@ struct CatalogCommonListView<T: CDCatalogName>: View {
             
             switch route {
             case .new:
-                let viewModel = CatalogCommonEditViewModel<T>()
-                CatalogCommonEditView(viewModel: viewModel, objectType: objectType)
+                if objectType == .catalogDebt {
+                    let viewModel = CatalogDebtEditViewModel()
+                    CatalogDebtEditView(viewModel: viewModel, objectType: objectType)
+                }
+                else {
+                    let viewModel = CatalogCommonEditViewModel<T>()
+                    CatalogCommonEditView(viewModel: viewModel, objectType: objectType)
+                }
+                
             case let .edit(objectID):
-                let viewModel = CatalogCommonEditViewModel<T>(id: objectID)
-                CatalogCommonEditView(viewModel: viewModel, objectType: objectType)
+                if objectType == .catalogDebt {
+                    let viewModel = CatalogDebtEditViewModel(id: objectID)
+                    CatalogDebtEditView(viewModel: viewModel, objectType: objectType)
+                }
+                else {
+                    let viewModel = CatalogCommonEditViewModel<T>(id: objectID)
+                    CatalogCommonEditView(viewModel: viewModel, objectType: objectType)
+                }
             }
             
         })
+        
         
     }
     

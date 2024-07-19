@@ -10,12 +10,19 @@ import CoreData
 extension CoreDataStack {
     
     static var cdCatalogStateIncomePreview: CDCatalogStateIncome! {
-//        return CoreDataStack.previewStack.findOne(CDCatalogStateIncome.self, predicate: nil, inContext: CoreDataStack.previewStack.viewContext)
         self.cdCatalogStateIncomeArrayPreview.first
     }
     
     static var cdCatalogStateIncomeArrayPreview: [CDCatalogStateIncome] {
         CoreDataStack.previewStack.find(CDCatalogStateIncome.self, predicate: nil, sortDescriptors: nil, inContext: CoreDataStack.previewStack.viewContext) ?? []
+    }
+    
+    static var cdCatalogDebtPreview: CDCatalogDebt! {
+        self.cdCatalogDebtArrayPreview.first
+    }
+    
+    static var cdCatalogDebtArrayPreview: [CDCatalogDebt] {
+        CoreDataStack.previewStack.find(CDCatalogDebt.self, predicate: nil, sortDescriptors: nil, inContext: CoreDataStack.previewStack.viewContext) ?? []
     }
     
     @discardableResult
@@ -32,18 +39,28 @@ extension CoreDataStack {
         
     }
     
+    @discardableResult
+    private static func createCDCatalogDebt(inContext context: NSManagedObjectContext) -> [CDCatalogDebt] {
+        
+        var array: [CDCatalogDebt] = []
+        for i in 1...10 {
+            let cdCatalogStateIncome = CDCatalogDebt(context: context)
+            cdCatalogStateIncome.name = "Debt \(i)"
+            array.append(cdCatalogStateIncome)
+        }
+        
+        return array
+        
+    }
+    
     static var previewStack: ICoreDataStack = {
         
         let coreDataStack = CoreDataStack(modelName: "Model", storeType: .inMemory)
         
         let viewContext = coreDataStack.viewContext
         
-        
-//        let cdCatalogStateIncome = CDCatalogStateIncome(context: viewContext)
-//        cdCatalogStateIncome.name = "State sdfsdf"
-        
         createCDCatalogStateIncome(inContext: viewContext)
-//        CoreDataStack.cdCatalogStateIncomeArrayPreview = [cdCatalogStateIncome]
+        createCDCatalogDebt(inContext: viewContext)
         
         do {
             try viewContext.save()
