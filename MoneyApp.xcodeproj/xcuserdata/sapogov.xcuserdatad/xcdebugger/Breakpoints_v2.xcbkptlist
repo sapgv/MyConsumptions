@@ -98,36 +98,6 @@
             endingLineNumber = "84"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "9B26635C-235D-48D4-8584-143460B4D084 - 806aa482648ec9d8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (MoneyApp.Coordinator.CatalogDebtEditView) -&gt; MoneyApp.CatalogCommonSelectListView&lt;MoneyApp.CDCatalogContact&gt; in MoneyApp.CatalogDebtEditView.body.getter : some"
-                  moduleName = "MoneyApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sapogov/Projects/PersonalProjects/MoneyApp/MoneyApp/Views/CatalogDebtView/CatalogDebtEditView/CatalogDebtEditView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84">
-               </Location>
-               <Location
-                  uuid = "9B26635C-235D-48D4-8584-143460B4D084 - 65aac55667f07cab"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MoneyApp.CDCatalogContact) -&gt; () in closure #5 (MoneyApp.Coordinator.CatalogDebtEditView) -&gt; MoneyApp.CatalogCommonSelectListView&lt;MoneyApp.CDCatalogContact&gt; in MoneyApp.CatalogDebtEditView.body.getter : some"
-                  moduleName = "MoneyApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sapogov/Projects/PersonalProjects/MoneyApp/MoneyApp/Views/CatalogDebtView/CatalogDebtEditView/CatalogDebtEditView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

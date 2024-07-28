@@ -18,6 +18,7 @@ final class Coordinator: ObservableObject {
 extension Coordinator {
     
     enum MainView {
+        case documentIncome
         case catalogStateIncome
         case catalogStateConsumption
         case catalogContact
@@ -42,5 +43,11 @@ extension Coordinator {
     enum CatalogDebtEditView: Hashable {
         case selectContact
     }
+    
+    enum DocumentIncomeListView: Hashable {
+        case new
+        case edit(objectID: NSManagedObjectID)
+    }
+    
     
 }

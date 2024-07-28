@@ -13,6 +13,12 @@
 		1060120F2C4A8B88006D3EF2 /* DebtType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120E2C4A8B88006D3EF2 /* DebtType.swift */; };
 		106012112C4A8C4C006D3EF2 /* CDCatalogDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */; };
 		1088FD7D2C56613F00B67845 /* CatalogCommonSelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD7C2C56613F00B67845 /* CatalogCommonSelectListView.swift */; };
+		1088FD802C566EB500B67845 /* DocumentIncomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD7F2C566EB500B67845 /* DocumentIncomeListView.swift */; };
+		1088FD822C566EC300B67845 /* DocumentIncomeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD812C566EC300B67845 /* DocumentIncomeListViewModel.swift */; };
+		1088FD842C566FF100B67845 /* DocumentIncomeListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD832C566FF100B67845 /* DocumentIncomeListRowView.swift */; };
+		1088FD862C56724F00B67845 /* CDDocumentIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD852C56724F00B67845 /* CDDocumentIncome.swift */; };
+		1088FD8B2C56761600B67845 /* DocumentIncomeEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD8A2C56761600B67845 /* DocumentIncomeEditViewModel.swift */; };
+		1088FD8D2C56761C00B67845 /* DocumentIncomeEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD8C2C56761C00B67845 /* DocumentIncomeEditView.swift */; };
 		10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */; };
 		10A4DC5A2C35C532000392E9 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC592C35C532000392E9 /* EditNameView.swift */; };
 		10E90A732BBBE6B50049C929 /* MoneyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E90A722BBBE6B50049C929 /* MoneyAppApp.swift */; };
@@ -45,6 +51,12 @@
 		1060120E2C4A8B88006D3EF2 /* DebtType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtType.swift; sourceTree = "<group>"; };
 		106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCatalogDebt.swift; sourceTree = "<group>"; };
 		1088FD7C2C56613F00B67845 /* CatalogCommonSelectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCommonSelectListView.swift; sourceTree = "<group>"; };
+		1088FD7F2C566EB500B67845 /* DocumentIncomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeListView.swift; sourceTree = "<group>"; };
+		1088FD812C566EC300B67845 /* DocumentIncomeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeListViewModel.swift; sourceTree = "<group>"; };
+		1088FD832C566FF100B67845 /* DocumentIncomeListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeListRowView.swift; sourceTree = "<group>"; };
+		1088FD852C56724F00B67845 /* CDDocumentIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDocumentIncome.swift; sourceTree = "<group>"; };
+		1088FD8A2C56761600B67845 /* DocumentIncomeEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeEditViewModel.swift; sourceTree = "<group>"; };
+		1088FD8C2C56761C00B67845 /* DocumentIncomeEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeEditView.swift; sourceTree = "<group>"; };
 		10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackPreview.swift; sourceTree = "<group>"; };
 		10A4DC592C35C532000392E9 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MoneyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +112,34 @@
 			path = CatalogDebtEditView;
 			sourceTree = "<group>";
 		};
+		1088FD7E2C566E9C00B67845 /* DocumentIncomeView */ = {
+			isa = PBXGroup;
+			children = (
+				1088FD872C5675F600B67845 /* DocumentIncomeListView */,
+				1088FD892C56760500B67845 /* DocumentIncomeEditView */,
+			);
+			path = DocumentIncomeView;
+			sourceTree = "<group>";
+		};
+		1088FD872C5675F600B67845 /* DocumentIncomeListView */ = {
+			isa = PBXGroup;
+			children = (
+				1088FD812C566EC300B67845 /* DocumentIncomeListViewModel.swift */,
+				1088FD7F2C566EB500B67845 /* DocumentIncomeListView.swift */,
+				1088FD832C566FF100B67845 /* DocumentIncomeListRowView.swift */,
+			);
+			path = DocumentIncomeListView;
+			sourceTree = "<group>";
+		};
+		1088FD892C56760500B67845 /* DocumentIncomeEditView */ = {
+			isa = PBXGroup;
+			children = (
+				1088FD8A2C56761600B67845 /* DocumentIncomeEditViewModel.swift */,
+				1088FD8C2C56761C00B67845 /* DocumentIncomeEditView.swift */,
+			);
+			path = DocumentIncomeEditView;
+			sourceTree = "<group>";
+		};
 		10E90A662BBBE6B50049C929 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +190,7 @@
 		10E90A832BBBE8540049C929 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1088FD7E2C566E9C00B67845 /* DocumentIncomeView */,
 				106012062C4A7FCB006D3EF2 /* CatalogDebtView */,
 				10FF93BC2C44EF7300037C21 /* EditNameView */,
 				10E90A862BBBE8780049C929 /* MainView */,
@@ -204,6 +245,7 @@
 				10E90A9C2BBBED0A0049C929 /* StoreType.swift */,
 				10FF93C12C44F97D00037C21 /* CDCatalogName.swift */,
 				106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */,
+				1088FD852C56724F00B67845 /* CDDocumentIncome.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -348,9 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1088FD802C566EB500B67845 /* DocumentIncomeListView.swift in Sources */,
 				10A4DC5A2C35C532000392E9 /* EditNameView.swift in Sources */,
 				10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */,
 				10E90A902BBBEA880049C929 /* ObjectType.swift in Sources */,
+				1088FD862C56724F00B67845 /* CDDocumentIncome.swift in Sources */,
 				10E90A982BBBEC9C0049C929 /* CatalogStateIncomeEditViewModel.swift in Sources */,
 				10E90A9F2BBBED0A0049C929 /* SaveStatus.swift in Sources */,
 				10FF93C02C44F91900037C21 /* CatalogCommonListView.swift in Sources */,
@@ -362,6 +406,7 @@
 				10E90AA12BBBED0A0049C929 /* StoreType.swift in Sources */,
 				106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */,
 				10E90AA22BBBED0A0049C929 /* CoreDataStack.swift in Sources */,
+				1088FD822C566EC300B67845 /* DocumentIncomeListViewModel.swift in Sources */,
 				106012112C4A8C4C006D3EF2 /* CDCatalogDebt.swift in Sources */,
 				10E90AA42BBBED1B0049C929 /* Model.swift in Sources */,
 				10E90A8D2BBBE9010049C929 /* Model.xcdatamodeld in Sources */,
@@ -369,11 +414,14 @@
 				10E90AA92BBBEF250049C929 /* Extensions.swift in Sources */,
 				10E90A822BBBE8050049C929 /* Coordinator.swift in Sources */,
 				10FF93C52C455D2800037C21 /* CatalogCommonEditView.swift in Sources */,
+				1088FD8B2C56761600B67845 /* DocumentIncomeEditViewModel.swift in Sources */,
 				10E90AA02BBBED0A0049C929 /* CoreData + Extensions.swift in Sources */,
 				1060120B2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift in Sources */,
 				10FF93C72C455D8200037C21 /* CatalogCommonEditViewModel.swift in Sources */,
 				10E90A9E2BBBED0A0049C929 /* CoreDataStack.Log.swift in Sources */,
+				1088FD842C566FF100B67845 /* DocumentIncomeListRowView.swift in Sources */,
 				10E90A962BBBEC230049C929 /* CatalogStateIncomeEditView.swift in Sources */,
+				1088FD8D2C56761C00B67845 /* DocumentIncomeEditView.swift in Sources */,
 				10FF93C22C44F97D00037C21 /* CDCatalogName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

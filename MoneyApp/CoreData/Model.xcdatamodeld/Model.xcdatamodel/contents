@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="CDCatalogContact" representedClassName="CDCatalogContact" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="cdDebts_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDCatalogDebt" inverseName="cdContact" inverseEntity="CDCatalogDebt"/>
@@ -14,8 +14,22 @@
     </entity>
     <entity name="CDCatalogStateIncome" representedClassName="CDCatalogStateIncome" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="cdDocumentIncomeState_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentIncomeState" inverseName="cdIncomeState" inverseEntity="CDDocumentIncomeState"/>
     </entity>
     <entity name="CDCatalogWallet" representedClassName="CDCatalogWallet" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="cdDocumentIncome_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentIncome" inverseName="cdCatalogWallet" inverseEntity="CDDocumentIncome"/>
+    </entity>
+    <entity name="CDDocumentIncome" representedClassName="CDDocumentIncome" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="cdCatalogWallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogWallet" inverseName="cdDocumentIncome_" inverseEntity="CDCatalogWallet"/>
+        <relationship name="cdDocumentIncomeStates_" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDDocumentIncomeState" inverseName="cdDocumentIncome" inverseEntity="CDDocumentIncomeState"/>
+    </entity>
+    <entity name="CDDocumentIncomeState" representedClassName="CDDocumentIncomeState" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="cdDocumentIncome" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDDocumentIncome" inverseName="cdDocumentIncomeStates_" inverseEntity="CDDocumentIncome"/>
+        <relationship name="cdIncomeState" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogStateIncome" inverseName="cdDocumentIncomeState_" inverseEntity="CDCatalogStateIncome"/>
     </entity>
 </model>

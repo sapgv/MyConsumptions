@@ -19,6 +19,17 @@ struct MainView: View {
                 
                 Section {
                     
+                    NavigationLink(value: Coordinator.MainView.documentIncome) {
+                        Text(ObjectType.documentIncome.listTitle)
+                    }
+                    
+                }
+                header: {
+                    Text("Документы")
+                }
+                
+                Section {
+                    
                     NavigationLink(value: Coordinator.MainView.catalogStateIncome) {
                         Text(ObjectType.catalogStateIncome.listTitle)
                     }
@@ -49,16 +60,18 @@ struct MainView: View {
             .navigationDestination(for: Coordinator.MainView.self) { route in
                 
                 switch route {
+                case .documentIncome:
+                    DocumentIncomeListView(objectType: .documentIncome)
                 case .catalogStateIncome:
-                    CatalogCommonListView<CDCatalogStateIncome>(objectType: ObjectType.catalogStateIncome)
+                    CatalogCommonListView<CDCatalogStateIncome>(objectType: .catalogStateIncome)
                 case .catalogStateConsumption:
-                    CatalogCommonListView<CDCatalogStateConsumption>(objectType: ObjectType.catalogStateConsumption)
+                    CatalogCommonListView<CDCatalogStateConsumption>(objectType: .catalogStateConsumption)
                 case .catalogContact:
-                    CatalogCommonListView<CDCatalogContact>(objectType: ObjectType.catalogContact)
+                    CatalogCommonListView<CDCatalogContact>(objectType: .catalogContact)
                 case .catalogDebt:
-                    CatalogCommonListView<CDCatalogDebt>(objectType: ObjectType.catalogDebt)
+                    CatalogCommonListView<CDCatalogDebt>(objectType: .catalogDebt)
                 case .catalogWallet:
-                    CatalogCommonListView<CDCatalogWallet>(objectType: ObjectType.catalogWallet)
+                    CatalogCommonListView<CDCatalogWallet>(objectType: .catalogWallet)
                 }
                 
             }

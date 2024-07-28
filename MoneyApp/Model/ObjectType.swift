@@ -9,6 +9,7 @@ import Foundation
 
 enum ObjectType: String {
     
+    case documentIncome
     case catalogStateIncome
     case catalogStateConsumption
     case catalogContact
@@ -17,6 +18,8 @@ enum ObjectType: String {
     
     var listTitle: String {
         switch self {
+        case .documentIncome:
+            return "Доход"
         case .catalogStateIncome:
             return "Статьи дохода"
         case .catalogStateConsumption:
@@ -32,6 +35,8 @@ enum ObjectType: String {
     
     var editTitle: String {
         switch self {
+        case .documentIncome:
+            return "Доход"
         case .catalogStateIncome:
             return "Статья дохода"
         case .catalogStateConsumption:
