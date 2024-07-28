@@ -27,6 +27,7 @@ final class CatalogDebtEditViewModel: ObservableObject {
         }
         else {
             self.cdCatalogDebt = CDCatalogDebt(context: self.viewContext)
+            self.cdCatalogDebt.debtType = .giveoutDebt
         }
         
         self.anyCancellable = self.cdCatalogDebt.objectWillChange.sink { [weak self] _ in

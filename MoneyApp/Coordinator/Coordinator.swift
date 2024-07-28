@@ -35,8 +35,12 @@ extension Coordinator {
         case edit(objectID: NSManagedObjectID)
     }
     
+    enum CatalogCommonSelectListView: Hashable {
+        case new
+    }
+    
     enum CatalogDebtEditView: Hashable {
-        case selectDebt
+        case selectContact
     }
     
 }

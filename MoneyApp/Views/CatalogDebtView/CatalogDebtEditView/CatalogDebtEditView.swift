@@ -23,7 +23,15 @@ struct CatalogDebtEditView: View {
             
             Section {
                 
-                NavigationLink(value: Coordinator.CatalogDebtEditView.selectDebt) {
+//                NavigationLink {
+//                    CatalogCommonSelectListView<CDCatalogContact>(objectType: .catalogContact, selected: self.viewModel.cdCatalogDebt.cdContact) { cdContact in
+//                        self.viewModel.updateContact(cdContact: cdContact)
+//                    }
+//                } label: {
+//                    CatalogDebtContactView(name: viewModel.cdCatalogDebt.cdContact?.name)
+//                }
+
+                NavigationLink(value: Coordinator.CatalogDebtEditView.selectContact) {
                     CatalogDebtContactView(name: viewModel.cdCatalogDebt.cdContact?.name)
                 }
                 
@@ -72,8 +80,8 @@ struct CatalogDebtEditView: View {
         })
         .navigationDestination(for: Coordinator.CatalogDebtEditView.self) { route in
             switch route {
-            case .selectDebt:
-                CatalogCommonListView<CDCatalogContact>(objectType: .catalogContact, selected: self.viewModel.cdCatalogDebt.cdContact) { cdContact in
+            case .selectContact:
+                CatalogCommonSelectListView<CDCatalogContact>(objectType: .catalogContact, selected: self.viewModel.cdCatalogDebt.cdContact) { cdContact in
                     self.viewModel.updateContact(cdContact: cdContact)
                 }
             }

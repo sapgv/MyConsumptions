@@ -12,6 +12,7 @@
 		1060120D2C4A815A006D3EF2 /* CatalogDebtContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120C2C4A815A006D3EF2 /* CatalogDebtContactView.swift */; };
 		1060120F2C4A8B88006D3EF2 /* DebtType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120E2C4A8B88006D3EF2 /* DebtType.swift */; };
 		106012112C4A8C4C006D3EF2 /* CDCatalogDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */; };
+		1088FD7D2C56613F00B67845 /* CatalogCommonSelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD7C2C56613F00B67845 /* CatalogCommonSelectListView.swift */; };
 		10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */; };
 		10A4DC5A2C35C532000392E9 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC592C35C532000392E9 /* EditNameView.swift */; };
 		10E90A732BBBE6B50049C929 /* MoneyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E90A722BBBE6B50049C929 /* MoneyAppApp.swift */; };
@@ -43,6 +44,7 @@
 		1060120C2C4A815A006D3EF2 /* CatalogDebtContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtContactView.swift; sourceTree = "<group>"; };
 		1060120E2C4A8B88006D3EF2 /* DebtType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtType.swift; sourceTree = "<group>"; };
 		106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCatalogDebt.swift; sourceTree = "<group>"; };
+		1088FD7C2C56613F00B67845 /* CatalogCommonSelectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCommonSelectListView.swift; sourceTree = "<group>"; };
 		10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackPreview.swift; sourceTree = "<group>"; };
 		10A4DC592C35C532000392E9 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MoneyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				10FF93BF2C44F91900037C21 /* CatalogCommonListView.swift */,
+				1088FD7C2C56613F00B67845 /* CatalogCommonSelectListView.swift */,
 			);
 			path = CatalogCommonListView;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				1060120F2C4A8B88006D3EF2 /* DebtType.swift in Sources */,
 				10E90A752BBBE6B50049C929 /* MainView.swift in Sources */,
 				10E90A732BBBE6B50049C929 /* MoneyAppApp.swift in Sources */,
+				1088FD7D2C56613F00B67845 /* CatalogCommonSelectListView.swift in Sources */,
 				1060120D2C4A815A006D3EF2 /* CatalogDebtContactView.swift in Sources */,
 				10E90AA12BBBED0A0049C929 /* StoreType.swift in Sources */,
 				106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */,

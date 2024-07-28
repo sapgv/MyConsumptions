@@ -16,41 +16,12 @@ struct CatalogCommonListView<T: CDCatalogName>: View {
 
     var objectType: ObjectType
     
-    var selected: T?
-    
-    var selectAction: ((T) -> Void)?
-    
     var body: some View {
         
         List(list) { catalog in
             
-            if let selectAction = selectAction {
-                
-                HStack {
-                    Text(catalog.name ?? "")
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            dismiss()
-                            selectAction(catalog)
-                        }
-                    Spacer()
-                    if catalog.name == selected?.name {
-                        Image(systemName: "checkmark")
-                            .foregroundStyle(Color.blue)
-                    }
-                }
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    self.selectAction?(catalog)
-                    dismiss()
-                }
-                
-                
-            }
-            else {
-                NavigationLink(value: Coordinator.CatalogCommonListView.edit(objectID: catalog.objectID)) {
-                    Text(catalog.name ?? "")
-                }
+            NavigationLink(value: Coordinator.CatalogCommonListView.edit(objectID: catalog.objectID)) {
+                Text(catalog.name ?? "")
             }
             
         }
