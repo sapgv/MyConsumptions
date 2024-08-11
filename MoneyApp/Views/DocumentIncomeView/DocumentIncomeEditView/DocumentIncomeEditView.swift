@@ -46,8 +46,12 @@ struct DocumentIncomeEditView: View {
                 ForEach(viewModel.cdDocumentIncome.cdDocumentIncomeStates) { state in
                     
                     HStack {
-                        Text(state.cdIncomeState?.name ?? "")
-                            .contentShape(Rectangle())
+                        VStack(alignment: .leading, spacing: 8, content: {
+                            Text(state.cdIncomeState?.name ?? "")
+                                .contentShape(Rectangle())
+                            Text(state.comment ?? "")
+                                .foregroundStyle(.secondary)
+                        })
                         Spacer()
                         Text("\(state.value ?? 0)")
                             .font(.title)
@@ -114,6 +118,7 @@ struct DocumentIncomeEditView: View {
                 self.viewModel.refresh()
             }
         })
+        .navigationTitle(objectType.editTitle)
         .navigationDestination(for: Coordinator.DocumentIncomeEditView.self) { route in
             switch route {
             case .selectWallet:

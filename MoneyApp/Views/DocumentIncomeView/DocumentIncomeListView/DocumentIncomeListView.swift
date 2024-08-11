@@ -20,7 +20,7 @@ struct DocumentIncomeListView: View {
         List(list) { document in
             
             NavigationLink(value: Coordinator.DocumentIncomeListView.edit(objectID: document.objectID)) {
-                DocumentIncomeListRowView(date: document.date, value: document.value)
+                DocumentIncomeListRowView(date: document.date, wallet: document.cdCatalogWallet?.name, value: document.value)
             }
             
         }
