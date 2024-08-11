@@ -1,0 +1,63 @@
+//
+//  TextFieldDecimal.swift
+//  iMoneyUI
+//
+//  Created by Grigory Sapogov on 22.02.2024.
+//  Copyright © 2024 sapgv. All rights reserved.
+//
+
+import SwiftUI
+import UIKit
+
+struct TextFieldDecimal: UIViewRepresentable {
+    
+    @Binding var value: NSDecimalNumber?
+    
+    var numberFormatter: NumberFormatter
+    
+    var textAlignment: NSTextAlignment
+    
+    init(value: Binding<NSDecimalNumber?>,
+         numberFormatter: NumberFormatter = Model.decimalFormatter,
+         textAlignment: NSTextAlignment = .right
+    ) {
+        self._value = value
+        self.numberFormatter = numberFormatter
+        self.textAlignment = textAlignment
+    }
+    
+    func makeUIView(context: Context) -> DecimalTextField {
+        let textField = DecimalTextField(numberFormatter: Model.decimalFormatter)
+        textField.keyboardType = .decimalPad
+        textField.textAlignment = self.textAlignment
+        textField.decimalTextFieldDelegate = context.coordinator
+        textField.text = (self.value ?? 0).decimalValue.cleanFormatted
+        return textField
+    }
+    
+    func updateUIView(_ uiView: DecimalTextField, context: Context) {
+        guard let value = uiView.text?.double else { return }
+        let decimal = NSDecimalNumber(value: value)
+        guard decimal != self.value && self.value != 0 else { return }
+        uiView.text = Model.decimalFormatter.string(from: decimal)
+    }
+    
+    func makeCoordinator() -> TextFieldDecimal.Coordinator {
+        Coordinator(parent: self)
+    }
+    
+    class Coordinator: NSObject, UITextFieldDelegate, DecimalTextFieldDelegate {
+        
+        var parent: TextFieldDecimal
+        
+        init(parent: TextFieldDecimal) {
+            self.parent = parent
+        }
+        
+        func didChange(value: Double, in textField: DecimalTextField) {
+            self.parent.value = NSDecimalNumber(value: value)
+        }
+        
+    }
+    
+}

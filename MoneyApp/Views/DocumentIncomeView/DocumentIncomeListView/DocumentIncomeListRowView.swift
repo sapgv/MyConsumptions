@@ -15,7 +15,7 @@ struct DocumentIncomeListRowView: View {
     
     var states: [String]?
     
-    var value: Double
+    var value: Decimal
     
     var body: some View {
         

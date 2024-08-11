@@ -51,9 +51,24 @@ final class DocumentIncomeEditViewModel: ObservableObject {
         
     }
     
-//    func updateContact(cdContact: CDCatalogContact) {
-//        let cdContact = self.viewContext.objectInContext(CDCatalogContact.self, objectID: cdContact.objectID)
-//        self.cdCatalogDebt.cdContact = cdContact
-//    }
+    func updateWallet(cdWallet: CDCatalogWallet) {
+        let cdWallet = self.viewContext.objectInContext(CDCatalogWallet.self, objectID: cdWallet.objectID)
+        self.cdDocumentIncome.cdCatalogWallet = cdWallet
+    }
+    
+    func createChildContext() -> NSManagedObjectContext {
+        let viewContext = Model.coreData.createChildContext(from: self.viewContext, concurrencyType: .mainQueueConcurrencyType)
+        return viewContext
+    }
+    
+    func addState(cdDocumentIncomeState: CDDocumentIncomeState) {
+        guard let context = self.cdDocumentIncome.managedObjectContext else { return }
+        guard let cdDocumentIncomeState = context.objectInContext(CDDocumentIncomeState.self, objectID: cdDocumentIncomeState.objectID) else { return }
+        self.cdDocumentIncome.cdDocumentIncomeStates.append(cdDocumentIncomeState)
+    }
+    
+    func refresh() {
+        self.viewContext.refreshAllObjects()
+    }
     
 }

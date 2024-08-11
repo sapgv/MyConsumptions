@@ -28,7 +28,7 @@
     </entity>
     <entity name="CDDocumentIncomeState" representedClassName="CDDocumentIncomeState" syncable="YES" codeGenerationType="class">
         <attribute name="comment" optional="YES" attributeType="String"/>
-        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <relationship name="cdDocumentIncome" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDDocumentIncome" inverseName="cdDocumentIncomeStates_" inverseEntity="CDDocumentIncome"/>
         <relationship name="cdIncomeState" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogStateIncome" inverseName="cdDocumentIncomeState_" inverseEntity="CDCatalogStateIncome"/>
     </entity>

@@ -7,8 +7,17 @@
 
 import Foundation
 
-final class Model {
+public final class Model {
     
     static let coreData: CoreDataStack = CoreDataStack(modelName: "Model")
+
+    public static let decimalFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = " "
+        formatter.decimalSeparator = "."
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }()
     
 }

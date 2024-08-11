@@ -23,16 +23,8 @@ struct CatalogDebtEditView: View {
             
             Section {
                 
-//                NavigationLink {
-//                    CatalogCommonSelectListView<CDCatalogContact>(objectType: .catalogContact, selected: self.viewModel.cdCatalogDebt.cdContact) { cdContact in
-//                        self.viewModel.updateContact(cdContact: cdContact)
-//                    }
-//                } label: {
-//                    CatalogDebtContactView(name: viewModel.cdCatalogDebt.cdContact?.name)
-//                }
-
                 NavigationLink(value: Coordinator.CatalogDebtEditView.selectContact) {
-                    CatalogDebtContactView(name: viewModel.cdCatalogDebt.cdContact?.name)
+                    SubtitleView(name: viewModel.cdCatalogDebt.cdContact?.name, subtitle: "Контакт")
                 }
                 
                 HStack(spacing: 8, content: {

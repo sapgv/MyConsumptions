@@ -9,8 +9,8 @@ import Foundation
 
 extension CDDocumentIncome {
     
-    var value: Double {
-        self.cdDocumentIncomeStates.reduce(0, { $0 + $1.value })
+    var value: Decimal {
+        self.cdDocumentIncomeStates.reduce(0, { $0 + ($1.value?.decimalValue ?? 0) })
     }
     
     var cdDocumentIncomeStates: [CDDocumentIncomeState] {

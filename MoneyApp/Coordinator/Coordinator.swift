@@ -49,5 +49,14 @@ extension Coordinator {
         case edit(objectID: NSManagedObjectID)
     }
     
+    enum DocumentIncomeEditView: Hashable {
+        case selectWallet
+        case selectIncomeState(objectId: NSManagedObjectID)
+    }
+    
+    enum DocumentIncomeStateEditView: Hashable {
+        case selectStateIncome
+    }
+    
     
 }
