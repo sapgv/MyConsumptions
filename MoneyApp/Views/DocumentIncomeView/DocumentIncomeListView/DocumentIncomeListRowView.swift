@@ -17,28 +17,49 @@ struct DocumentIncomeListRowView: View {
     
     var value: Decimal
     
+    var stateComment: String?
+    
+    var comment: String?
+    
     var body: some View {
         
-        HStack(spacing: 8) {
+        VStack(alignment: .leading, spacing: 8) {
             
-            VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 8) {
                 
-                if let date = date {
-                    Text(date.formatted())
-                        .foregroundStyle(.secondary)
+                VStack(alignment: .leading, spacing: 8) {
+                    
+                    if let date = date {
+                        Text(date.formatted())
+                            .foregroundStyle(.secondary)
+                    }
+                    
+                    if let wallet = wallet {
+                        Text(wallet)
+                    }
+                    
+                    
+                    
                 }
                 
-                if let wallet = wallet {
-                    Text(wallet)
-                }
+                Spacer()
+                
+                Text("\(value)")
+                    .font(.title)
+                    .foregroundStyle(.green)
                 
             }
             
-            Spacer()
+            if let stateComment = stateComment {
+                Text(stateComment)
+                    .foregroundStyle(.secondary)
+            }
             
-            Text("\(value)")
-                .font(.title)
-                .foregroundStyle(.green)
+            if let comment = comment {
+                Text(comment)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+            }
             
         }
         
@@ -50,7 +71,7 @@ struct DocumentIncomeListRowView: View {
         
         List {
             
-            DocumentIncomeListRowView(date: .now, wallet: "Wallet", value: 4000)
+            DocumentIncomeListRowView(date: .now, wallet: "Wallet", value: 4000, stateComment: "test, test", comment: "Test")
             
         }
         

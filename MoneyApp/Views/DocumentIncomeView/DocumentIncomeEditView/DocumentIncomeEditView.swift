@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DocumentIncomeEditView: View {
     
+    @EnvironmentObject var coordinator: Coordinator
+    
     @StateObject var viewModel: DocumentIncomeEditViewModel
     
     var objectType: ObjectType
@@ -16,6 +18,8 @@ struct DocumentIncomeEditView: View {
     @State private var addNewState: Bool = false
     
     @State private var editState: CDDocumentIncomeState?
+    
+    @State private var commment: String?
     
     var body: some View {
         
@@ -49,8 +53,11 @@ struct DocumentIncomeEditView: View {
                         VStack(alignment: .leading, spacing: 8, content: {
                             Text(state.cdIncomeState?.name ?? "")
                                 .contentShape(Rectangle())
-                            Text(state.comment ?? "")
-                                .foregroundStyle(.secondary)
+                            if let comment = state.comment {
+                                Text(comment)
+                                    .foregroundStyle(.secondary)
+                            }
+                            
                         })
                         Spacer()
                         Text("\(state.value ?? 0)")
@@ -80,7 +87,9 @@ struct DocumentIncomeEditView: View {
             
             Section {
                 
-                CommentView(text: $viewModel.cdDocumentIncome.comment)
+//                CommentView(text: $viewModel.cdDocumentIncome.comment)
+//                    .frame(minHeight: 100)
+                CommentView(text: $commment.defaultValue(""))
                     .frame(minHeight: 100)
                 
                 
@@ -91,6 +100,9 @@ struct DocumentIncomeEditView: View {
             
             
         }
+        .onReceive(self.viewModel.saveCompletion, perform: { cdDocumentIncomeState in
+            self.coordinator.path.removeLast()
+        })
         .toolbar {
             ToolbarItem {
                 Button(action: {

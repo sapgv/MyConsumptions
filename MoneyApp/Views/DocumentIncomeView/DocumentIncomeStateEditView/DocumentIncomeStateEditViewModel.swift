@@ -14,6 +14,10 @@ final class DocumentIncomeStateEditViewModel: ObservableObject {
     
     var cdDocumentIncomeState: CDDocumentIncomeState
     
+    var selectStateOnApper: Bool {
+        self.cdDocumentIncomeState.cdIncomeState == nil
+    }
+    
     private let viewContext: NSManagedObjectContext
     
     private var anyCancellable: AnyCancellable? = nil

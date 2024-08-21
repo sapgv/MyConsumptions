@@ -30,6 +30,7 @@
 		1088FDA42C568A0C00B67845 /* DecimalValueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FDA32C568A0C00B67845 /* DecimalValueRow.swift */; };
 		10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */; };
 		10A4DC5A2C35C532000392E9 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC592C35C532000392E9 /* EditNameView.swift */; };
+		10C9D22F2C76619200D3C517 /* ValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C9D22E2C76619200D3C517 /* ValueView.swift */; };
 		10E90A732BBBE6B50049C929 /* MoneyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E90A722BBBE6B50049C929 /* MoneyAppApp.swift */; };
 		10E90A752BBBE6B50049C929 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E90A742BBBE6B50049C929 /* MainView.swift */; };
 		10E90A772BBBE6B60049C929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E90A762BBBE6B60049C929 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		1088FDA32C568A0C00B67845 /* DecimalValueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalValueRow.swift; sourceTree = "<group>"; };
 		10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackPreview.swift; sourceTree = "<group>"; };
 		10A4DC592C35C532000392E9 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
+		10C9D22E2C76619200D3C517 /* ValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueView.swift; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MoneyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E90A722BBBE6B50049C929 /* MoneyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAppApp.swift; sourceTree = "<group>"; };
 		10E90A742BBBE6B50049C929 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				1088FD992C5682D400B67845 /* CommentView.swift */,
 				1088FDA32C568A0C00B67845 /* DecimalValueRow.swift */,
 				1060120C2C4A815A006D3EF2 /* SubtitleView.swift */,
+				10C9D22E2C76619200D3C517 /* ValueView.swift */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				1088FD802C566EB500B67845 /* DocumentIncomeListView.swift in Sources */,
 				10A4DC5A2C35C532000392E9 /* EditNameView.swift in Sources */,
 				10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */,
+				10C9D22F2C76619200D3C517 /* ValueView.swift in Sources */,
 				10E90A902BBBEA880049C929 /* ObjectType.swift in Sources */,
 				1088FD972C56819D00B67845 /* DocumentIncomeStateEditView.swift in Sources */,
 				1088FD862C56724F00B67845 /* CDDocumentIncome.swift in Sources */,
