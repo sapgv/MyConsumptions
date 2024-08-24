@@ -14,8 +14,7 @@ public final class Model {
     public static let decimalFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
-        formatter.groupingSeparator = " "
-        formatter.decimalSeparator = "."
+        formatter.locale = Locale.current
         formatter.maximumFractionDigits = 2
         return formatter
     }()

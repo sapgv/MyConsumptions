@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1021C4122C6930C20057D33B /* Extensions.Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021C4112C6930C20057D33B /* Extensions.Color.swift */; };
 		102B1D532C7A27B3009D4692 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B1D522C7A27B3009D4692 /* TextView.swift */; };
+		102B1D552C7A392E009D4692 /* Extension.Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B1D542C7A392E009D4692 /* Extension.Font.swift */; };
 		106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */; };
 		1060120B2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */; };
 		1060120D2C4A815A006D3EF2 /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120C2C4A815A006D3EF2 /* SubtitleView.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		1021C4112C6930C20057D33B /* Extensions.Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.Color.swift; sourceTree = "<group>"; };
 		102B1D522C7A27B3009D4692 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		102B1D542C7A392E009D4692 /* Extension.Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.Font.swift; sourceTree = "<group>"; };
 		106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditView.swift; sourceTree = "<group>"; };
 		1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditViewModel.swift; sourceTree = "<group>"; };
 		1060120C2C4A815A006D3EF2 /* SubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleView.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				1088FD9F2C5688A800B67845 /* Extensions.Decimal.swift */,
 				1088FDA12C5688C400B67845 /* Extensions.String.swift */,
 				1021C4112C6930C20057D33B /* Extensions.Color.swift */,
+				102B1D542C7A392E009D4692 /* Extension.Font.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				10E90AA22BBBED0A0049C929 /* CoreDataStack.swift in Sources */,
 				1088FD822C566EC300B67845 /* DocumentIncomeListViewModel.swift in Sources */,
 				1088FD9A2C5682D400B67845 /* CommentView.swift in Sources */,
+				102B1D552C7A392E009D4692 /* Extension.Font.swift in Sources */,
 				106012112C4A8C4C006D3EF2 /* CDCatalogDebt.swift in Sources */,
 				10E90AA42BBBED1B0049C929 /* Model.swift in Sources */,
 				1088FDA42C568A0C00B67845 /* DecimalValueRow.swift in Sources */,

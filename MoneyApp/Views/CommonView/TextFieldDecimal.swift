@@ -13,9 +13,11 @@ struct TextFieldDecimal: UIViewRepresentable {
     
     @Binding var value: NSDecimalNumber?
     
-    var numberFormatter: NumberFormatter
+    private var fontRepresentable: Font = .body
     
-    var textAlignment: NSTextAlignment
+    private let numberFormatter: NumberFormatter
+    
+    private let textAlignment: NSTextAlignment
     
     init(value: Binding<NSDecimalNumber?>,
          numberFormatter: NumberFormatter = Model.decimalFormatter,
@@ -32,6 +34,7 @@ struct TextFieldDecimal: UIViewRepresentable {
         textField.textAlignment = self.textAlignment
         textField.decimalTextFieldDelegate = context.coordinator
         textField.text = (self.value ?? 0).decimalValue.cleanFormatted
+        textField.font = UIFont.preferredFont(from: self.fontRepresentable)
         return textField
     }
     
@@ -61,3 +64,15 @@ struct TextFieldDecimal: UIViewRepresentable {
     }
     
 }
+
+extension TextFieldDecimal {
+    
+    func font(_ font: Font) -> some View {
+        var view = self
+        view.fontRepresentable = font
+        return view
+    }
+    
+}
+
+

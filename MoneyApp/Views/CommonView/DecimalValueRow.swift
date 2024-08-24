@@ -17,6 +17,9 @@ struct DecimalValueRow: View {
             Text("Сумма")
             Spacer()
             TextFieldDecimal(value: $value)
+                .font(.title)
+                
+               
         }
         
     }
@@ -25,7 +28,7 @@ struct DecimalValueRow: View {
 #Preview {
     NavigationStack {
         List {
-            DecimalValueRow(value: .constant(100))
+            DecimalValueRow(value: .constant(1000))
         }
     }
 }

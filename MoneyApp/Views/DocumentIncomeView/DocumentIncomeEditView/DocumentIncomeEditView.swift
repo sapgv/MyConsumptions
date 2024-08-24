@@ -58,7 +58,7 @@ struct DocumentIncomeEditView: View {
                             
                         })
                         Spacer()
-                        Text("\(state.value ?? 0)")
+                        ValueView(value: state.value?.decimalValue)
                             .font(.title)
                             .foregroundStyle(.green)
                     }
