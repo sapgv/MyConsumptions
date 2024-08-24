@@ -19,8 +19,6 @@ struct DocumentIncomeEditView: View {
     
     @State private var editState: CDDocumentIncomeState?
     
-    @State private var commment: String?
-    
     var body: some View {
         
         List {
@@ -87,12 +85,9 @@ struct DocumentIncomeEditView: View {
             
             Section {
                 
-//                CommentView(text: $viewModel.cdDocumentIncome.comment)
-//                    .frame(minHeight: 100)
-                CommentView(text: $commment.defaultValue(""))
+                CommentView(text: $viewModel.cdDocumentIncome.comment.defaultValue(""))
                     .frame(minHeight: 100)
-                
-                
+
             }
             header:  {
                 Text("Комментарий")

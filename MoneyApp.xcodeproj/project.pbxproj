@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1021C4122C6930C20057D33B /* Extensions.Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021C4112C6930C20057D33B /* Extensions.Color.swift */; };
+		102B1D532C7A27B3009D4692 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B1D522C7A27B3009D4692 /* TextView.swift */; };
 		106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */; };
 		1060120B2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */; };
 		1060120D2C4A815A006D3EF2 /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120C2C4A815A006D3EF2 /* SubtitleView.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		1021C4112C6930C20057D33B /* Extensions.Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.Color.swift; sourceTree = "<group>"; };
+		102B1D522C7A27B3009D4692 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditView.swift; sourceTree = "<group>"; };
 		1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditViewModel.swift; sourceTree = "<group>"; };
 		1060120C2C4A815A006D3EF2 /* SubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				1088FD9D2C56887300B67845 /* DecimalTextField.swift */,
 				1088FD9B2C56885E00B67845 /* TextFieldDecimal.swift */,
+				102B1D522C7A27B3009D4692 /* TextView.swift */,
 				1088FD992C5682D400B67845 /* CommentView.swift */,
 				1088FDA32C568A0C00B67845 /* DecimalValueRow.swift */,
 				1060120C2C4A815A006D3EF2 /* SubtitleView.swift */,
@@ -437,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1088FD802C566EB500B67845 /* DocumentIncomeListView.swift in Sources */,
+				102B1D532C7A27B3009D4692 /* TextView.swift in Sources */,
 				10A4DC5A2C35C532000392E9 /* EditNameView.swift in Sources */,
 				10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */,
 				10C9D22F2C76619200D3C517 /* ValueView.swift in Sources */,

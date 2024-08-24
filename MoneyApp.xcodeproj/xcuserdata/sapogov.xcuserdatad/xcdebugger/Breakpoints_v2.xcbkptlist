@@ -98,36 +98,6 @@
             endingLineNumber = "76"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "9B26635C-235D-48D4-8584-143460B4D084 - 806aa482648ec8d0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (MoneyApp.Coordinator.CatalogDebtEditView) -&gt; MoneyApp.CatalogCommonSelectListView&lt;MoneyApp.CDCatalogContact&gt; in MoneyApp.CatalogDebtEditView.body.getter : some"
-                  moduleName = "MoneyApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sapogov/Projects/PersonalProjects/MoneyApp/MoneyApp/Views/CatalogDebtView/CatalogDebtEditView/CatalogDebtEditView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76">
-               </Location>
-               <Location
-                  uuid = "9B26635C-235D-48D4-8584-143460B4D084 - 65aac55667f07da3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MoneyApp.CDCatalogContact) -&gt; () in closure #5 (MoneyApp.Coordinator.CatalogDebtEditView) -&gt; MoneyApp.CatalogCommonSelectListView&lt;MoneyApp.CDCatalogContact&gt; in MoneyApp.CatalogDebtEditView.body.getter : some"
-                  moduleName = "MoneyApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sapogov/Projects/PersonalProjects/MoneyApp/MoneyApp/Views/CatalogDebtView/CatalogDebtEditView/CatalogDebtEditView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -160,6 +130,22 @@
             endingLineNumber = "58"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30BDDB2A-35FB-44F7-BBA9-B72FE8FE3013"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoneyApp/Views/CommonView/TextView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "makeUIView(context:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
