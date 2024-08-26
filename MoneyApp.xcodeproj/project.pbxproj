@@ -25,7 +25,7 @@
 		1088FD8D2C56761C00B67845 /* DocumentIncomeEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD8C2C56761C00B67845 /* DocumentIncomeEditView.swift */; };
 		1088FD952C56819800B67845 /* DocumentIncomeStateEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD942C56819800B67845 /* DocumentIncomeStateEditViewModel.swift */; };
 		1088FD972C56819D00B67845 /* DocumentIncomeStateEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD962C56819D00B67845 /* DocumentIncomeStateEditView.swift */; };
-		1088FD9A2C5682D400B67845 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD992C5682D400B67845 /* CommentView.swift */; };
+		1088FD9A2C5682D400B67845 /* CommentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD992C5682D400B67845 /* CommentTextView.swift */; };
 		1088FD9C2C56885E00B67845 /* TextFieldDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD9B2C56885E00B67845 /* TextFieldDecimal.swift */; };
 		1088FD9E2C56887300B67845 /* DecimalTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD9D2C56887300B67845 /* DecimalTextField.swift */; };
 		1088FDA02C5688A800B67845 /* Extensions.Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD9F2C5688A800B67845 /* Extensions.Decimal.swift */; };
@@ -34,6 +34,7 @@
 		10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */; };
 		10A4DC5A2C35C532000392E9 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4DC592C35C532000392E9 /* EditNameView.swift */; };
 		10C9D22F2C76619200D3C517 /* ValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C9D22E2C76619200D3C517 /* ValueView.swift */; };
+		10DD72B42C7CEBAD0068C695 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD72B32C7CEBAD0068C695 /* CommentView.swift */; };
 		10E90A732BBBE6B50049C929 /* MoneyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E90A722BBBE6B50049C929 /* MoneyAppApp.swift */; };
 		10E90A752BBBE6B50049C929 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E90A742BBBE6B50049C929 /* MainView.swift */; };
 		10E90A772BBBE6B60049C929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E90A762BBBE6B60049C929 /* Assets.xcassets */; };
@@ -76,7 +77,7 @@
 		1088FD8C2C56761C00B67845 /* DocumentIncomeEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeEditView.swift; sourceTree = "<group>"; };
 		1088FD942C56819800B67845 /* DocumentIncomeStateEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeStateEditViewModel.swift; sourceTree = "<group>"; };
 		1088FD962C56819D00B67845 /* DocumentIncomeStateEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeStateEditView.swift; sourceTree = "<group>"; };
-		1088FD992C5682D400B67845 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		1088FD992C5682D400B67845 /* CommentTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTextView.swift; sourceTree = "<group>"; };
 		1088FD9B2C56885E00B67845 /* TextFieldDecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDecimal.swift; sourceTree = "<group>"; };
 		1088FD9D2C56887300B67845 /* DecimalTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalTextField.swift; sourceTree = "<group>"; };
 		1088FD9F2C5688A800B67845 /* Extensions.Decimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.Decimal.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		10A4DC572C35BCBF000392E9 /* CoreDataStackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackPreview.swift; sourceTree = "<group>"; };
 		10A4DC592C35C532000392E9 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		10C9D22E2C76619200D3C517 /* ValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueView.swift; sourceTree = "<group>"; };
+		10DD72B32C7CEBAD0068C695 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MoneyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E90A722BBBE6B50049C929 /* MoneyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAppApp.swift; sourceTree = "<group>"; };
 		10E90A742BBBE6B50049C929 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -181,10 +183,11 @@
 				1088FD9D2C56887300B67845 /* DecimalTextField.swift */,
 				1088FD9B2C56885E00B67845 /* TextFieldDecimal.swift */,
 				102B1D522C7A27B3009D4692 /* TextView.swift */,
-				1088FD992C5682D400B67845 /* CommentView.swift */,
+				1088FD992C5682D400B67845 /* CommentTextView.swift */,
 				1088FDA32C568A0C00B67845 /* DecimalValueRow.swift */,
 				1060120C2C4A815A006D3EF2 /* SubtitleView.swift */,
 				10C9D22E2C76619200D3C517 /* ValueView.swift */,
+				10DD72B32C7CEBAD0068C695 /* CommentView.swift */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -464,11 +467,12 @@
 				1088FD7D2C56613F00B67845 /* CatalogCommonSelectListView.swift in Sources */,
 				1060120D2C4A815A006D3EF2 /* SubtitleView.swift in Sources */,
 				1088FD9C2C56885E00B67845 /* TextFieldDecimal.swift in Sources */,
+				10DD72B42C7CEBAD0068C695 /* CommentView.swift in Sources */,
 				10E90AA12BBBED0A0049C929 /* StoreType.swift in Sources */,
 				106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */,
 				10E90AA22BBBED0A0049C929 /* CoreDataStack.swift in Sources */,
 				1088FD822C566EC300B67845 /* DocumentIncomeListViewModel.swift in Sources */,
-				1088FD9A2C5682D400B67845 /* CommentView.swift in Sources */,
+				1088FD9A2C5682D400B67845 /* CommentTextView.swift in Sources */,
 				102B1D552C7A392E009D4692 /* Extension.Font.swift in Sources */,
 				106012112C4A8C4C006D3EF2 /* CDCatalogDebt.swift in Sources */,
 				10E90AA42BBBED1B0049C929 /* Model.swift in Sources */,

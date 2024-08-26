@@ -85,7 +85,7 @@ struct DocumentIncomeEditView: View {
             
             Section {
                 
-                CommentView(text: $viewModel.cdDocumentIncome.comment.defaultValue(""))
+                CommentTextView(text: $viewModel.cdDocumentIncome.comment.defaultValue(""))
                     .frame(minHeight: 100)
 
             }
@@ -107,10 +107,6 @@ struct DocumentIncomeEditView: View {
                 })
             }
         }
-//        .navigationDestination(isPresented: $addNewState, destination: {
-//            let viewModel = DocumentIncomeStateEditViewModel(viewContext: self.viewModel.createChildContext())
-//            DocumentIncomeStateEditView(viewModel: viewModel)
-//        })
         .sheet(isPresented: $addNewState, content: {
             let viewModel = DocumentIncomeStateEditViewModel(viewContext: self.viewModel.createChildContext())
             DocumentIncomeStateEditView(viewModel: viewModel) { cdDocumentIncomeState in

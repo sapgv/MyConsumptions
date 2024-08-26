@@ -12,6 +12,8 @@ struct CatalogCommonSelectListView<T: CDCatalogName>: View {
     
     @Environment(\.dismiss) var dismiss
     
+    @EnvironmentObject var coordinator: Coordinator
+    
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: T.sortKey, ascending: true)]) private var list: FetchedResults<T>
 
     var objectType: ObjectType
@@ -57,6 +59,8 @@ struct CatalogCommonSelectListView<T: CDCatalogName>: View {
             case .new:
                 let viewModel = CatalogCommonEditViewModel<T>()
                 CatalogCommonEditView(viewModel: viewModel, objectType: objectType)
+                    .environmentObject(coordinator)
+                    
             }
         })
         

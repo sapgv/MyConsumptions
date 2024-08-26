@@ -38,8 +38,6 @@ struct DocumentIncomeListRowView: View {
                         Text(wallet)
                     }
                     
-                    
-                    
                 }
                 
                 Spacer()
@@ -50,20 +48,15 @@ struct DocumentIncomeListRowView: View {
                 
             }
             
-            if let stateComment = stateComment {
-                Text(stateComment)
-                    .foregroundStyle(.secondary)
-            }
+            CommentView(comment: stateComment)
             
-            if let comment = comment {
-                Text(comment)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(2)
-            }
+            CommentView(comment: comment)
+                .lineLimit(2)
             
         }
         
     }
+    
 }
 
 #Preview {

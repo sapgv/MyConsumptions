@@ -11,7 +11,7 @@ struct DocumentIncomeStateEditView: View {
     
     @StateObject var viewModel: DocumentIncomeStateEditViewModel
     
-    @State private var selectState: Bool = false
+    @StateObject var coordinator: Coordinator = Coordinator()
     
     @State private var firstAppear = true
     
@@ -19,7 +19,7 @@ struct DocumentIncomeStateEditView: View {
     
     var body: some View {
         
-        NavigationStack {
+        NavigationStack(path: $coordinator.path) {
             
             List {
                 
@@ -39,13 +39,13 @@ struct DocumentIncomeStateEditView: View {
                 
                 Section {
                     
-                    CommentView(text: $viewModel.cdDocumentIncomeState.comment.defaultValue(""))
+                    CommentTextView(text: $viewModel.cdDocumentIncomeState.comment.defaultValue(""))
                         .frame(minHeight: 100)
                     
                 }
-                header: {
-                    Text("Комментарий")
-                }
+            header: {
+                Text("Комментарий")
+            }
                 
             }
             .onAppear {
@@ -56,7 +56,7 @@ struct DocumentIncomeStateEditView: View {
                 
                 if self.firstAppear, self.viewModel.selectStateOnApper {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                        self.selectState = true
+                        self.coordinator.path.append(Coordinator.DocumentIncomeStateEditView.selectStateIncome)
                     }
                 }
                 
@@ -74,23 +74,20 @@ struct DocumentIncomeStateEditView: View {
                 self.completion?(cdDocumentIncomeState)
             })
             .navigationTitle(ObjectType.catalogStateIncome.editTitle)
-            .navigationDestination(isPresented: self.$selectState, destination: {
-                CatalogCommonSelectListView<CDCatalogStateIncome>(objectType: .catalogStateIncome) { cdStateIncome in
-                    self.viewModel.updateState(cdStateIncome: cdStateIncome)
-                }
-            })
             .navigationDestination(for: Coordinator.DocumentIncomeStateEditView.self) { route in
                 switch route {
                 case .selectStateIncome:
                     CatalogCommonSelectListView<CDCatalogStateIncome>(objectType: .catalogStateIncome) { cdStateIncome in
                         self.viewModel.updateState(cdStateIncome: cdStateIncome)
                     }
+                    .environmentObject(coordinator)
                 }
             }
             
         }
         
     }
+    
 }
 
 #Preview {

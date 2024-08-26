@@ -2,22 +2,23 @@
 //  CommentView.swift
 //  MoneyApp
 //
-//  Created by Grigory Sapogov on 28.07.2024.
+//  Created by Grigory Sapogov on 26.08.2024.
 //
 
 import SwiftUI
 
 struct CommentView: View {
     
-    @Binding var text: String
+    var comment: String?
     
     var body: some View {
-        
-        TextView(text: $text)
-        
+        if let comment = comment, !comment.isEmpty {
+            Text(comment)
+                .foregroundStyle(.secondary)
+        }
     }
 }
 
 #Preview {
-    CommentView(text: .constant("comment"))
+    CommentView()
 }
