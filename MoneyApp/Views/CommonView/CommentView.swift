@@ -18,6 +18,6 @@ struct CommentView: View {
     }
 }
 
-//#Preview {
-//    CommentView(text: .constant("comment"))
-//}
+#Preview {
+    CommentView(text: .constant("comment"))
+}

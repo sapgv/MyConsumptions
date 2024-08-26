@@ -60,7 +60,7 @@ struct DocumentIncomeEditView: View {
                         Spacer()
                         ValueView(value: state.value?.decimalValue)
                             .font(.title)
-                            .foregroundStyle(.green)
+                            .foregroundStyle(.income)
                     }
                     .contentShape(Rectangle())
                     .onTapGesture {

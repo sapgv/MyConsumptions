@@ -18,7 +18,7 @@ struct DecimalValueRow: View {
             Spacer()
             TextFieldDecimal(value: $value)
                 .font(.title)
-                
+                .foregroundStyle(.income)
                
         }
         

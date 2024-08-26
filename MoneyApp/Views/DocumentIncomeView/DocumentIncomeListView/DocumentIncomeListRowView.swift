@@ -46,7 +46,7 @@ struct DocumentIncomeListRowView: View {
                 
                 ValueView(value: value)
                     .font(.title)
-                    .foregroundStyle(.green)
+                    .foregroundStyle(.income)
                 
             }
             

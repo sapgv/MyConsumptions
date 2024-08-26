@@ -15,6 +15,8 @@ struct TextFieldDecimal: UIViewRepresentable {
     
     private var fontRepresentable: Font = .body
     
+    private var representableTextColor: Color = .primary
+    
     private let numberFormatter: NumberFormatter
     
     private let textAlignment: NSTextAlignment
@@ -35,6 +37,7 @@ struct TextFieldDecimal: UIViewRepresentable {
         textField.decimalTextFieldDelegate = context.coordinator
         textField.text = (self.value ?? 0).decimalValue.cleanFormatted
         textField.font = UIFont.preferredFont(from: self.fontRepresentable)
+        textField.textColor = UIColor(self.representableTextColor)
         return textField
     }
     
@@ -63,13 +66,21 @@ struct TextFieldDecimal: UIViewRepresentable {
         
     }
     
+    
+    
 }
 
 extension TextFieldDecimal {
     
-    func font(_ font: Font) -> some View {
+    func font(_ font: Font) -> TextFieldDecimal {
         var view = self
         view.fontRepresentable = font
+        return view
+    }
+    
+    func foregroundStyle(_ style: Color) -> TextFieldDecimal {
+        var view = self
+        view.representableTextColor = style
         return view
     }
     

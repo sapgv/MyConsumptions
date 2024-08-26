@@ -15,6 +15,7 @@
 		1060120D2C4A815A006D3EF2 /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120C2C4A815A006D3EF2 /* SubtitleView.swift */; };
 		1060120F2C4A8B88006D3EF2 /* DebtType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120E2C4A8B88006D3EF2 /* DebtType.swift */; };
 		106012112C4A8C4C006D3EF2 /* CDCatalogDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */; };
+		10640CA92C7CAC6D00C692DA /* Extensions.ForegroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10640CA82C7CAC6D00C692DA /* Extensions.ForegroundStyle.swift */; };
 		1088FD7D2C56613F00B67845 /* CatalogCommonSelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD7C2C56613F00B67845 /* CatalogCommonSelectListView.swift */; };
 		1088FD802C566EB500B67845 /* DocumentIncomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD7F2C566EB500B67845 /* DocumentIncomeListView.swift */; };
 		1088FD822C566EC300B67845 /* DocumentIncomeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088FD812C566EC300B67845 /* DocumentIncomeListViewModel.swift */; };
@@ -65,6 +66,7 @@
 		1060120C2C4A815A006D3EF2 /* SubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleView.swift; sourceTree = "<group>"; };
 		1060120E2C4A8B88006D3EF2 /* DebtType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtType.swift; sourceTree = "<group>"; };
 		106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCatalogDebt.swift; sourceTree = "<group>"; };
+		10640CA82C7CAC6D00C692DA /* Extensions.ForegroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.ForegroundStyle.swift; sourceTree = "<group>"; };
 		1088FD7C2C56613F00B67845 /* CatalogCommonSelectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCommonSelectListView.swift; sourceTree = "<group>"; };
 		1088FD7F2C566EB500B67845 /* DocumentIncomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeListView.swift; sourceTree = "<group>"; };
 		1088FD812C566EC300B67845 /* DocumentIncomeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIncomeListViewModel.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				1088FDA12C5688C400B67845 /* Extensions.String.swift */,
 				1021C4112C6930C20057D33B /* Extensions.Color.swift */,
 				102B1D542C7A392E009D4692 /* Extension.Font.swift */,
+				10640CA82C7CAC6D00C692DA /* Extensions.ForegroundStyle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				10E90A902BBBEA880049C929 /* ObjectType.swift in Sources */,
 				1088FD972C56819D00B67845 /* DocumentIncomeStateEditView.swift in Sources */,
 				1088FD862C56724F00B67845 /* CDDocumentIncome.swift in Sources */,
+				10640CA92C7CAC6D00C692DA /* Extensions.ForegroundStyle.swift in Sources */,
 				10E90A982BBBEC9C0049C929 /* CatalogStateIncomeEditViewModel.swift in Sources */,
 				10E90A9F2BBBED0A0049C929 /* SaveStatus.swift in Sources */,
 				1088FDA02C5688A800B67845 /* Extensions.Decimal.swift in Sources */,
