@@ -71,4 +71,8 @@ final class DocumentIncomeEditViewModel: ObservableObject {
         self.viewContext.refreshAllObjects()
     }
     
+    func deleteState(cdDocumentIncomeState: CDDocumentIncomeState) {
+        self.cdDocumentIncome.cdDocumentIncomeStates.removeAll(where: { $0.objectID == cdDocumentIncomeState.objectID })
+    }
+    
 }

@@ -71,4 +71,8 @@ final class DocumentConsumptionEditViewModel: ObservableObject {
         self.viewContext.refreshAllObjects()
     }
     
+    func deleteState(cdDocumentConsumptionState: CDDocumentConsumptionState) {
+        self.cdDocumentConsumption.cdDocumentConsumptionStates.removeAll(where: { $0.objectID == cdDocumentConsumptionState.objectID })
+    }
+    
 }

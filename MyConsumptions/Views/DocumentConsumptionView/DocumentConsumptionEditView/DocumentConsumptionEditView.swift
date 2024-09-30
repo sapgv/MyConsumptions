@@ -62,6 +62,14 @@ struct DocumentConsumptionEditView: View {
                     .onTapGesture {
                         self.editState = state
                     }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                        Button("Удалить") {
+                            withAnimation {
+                                self.viewModel.deleteState(cdDocumentConsumptionState: state)
+                            }
+                        }
+                        .tint(.red)
+                    }
                     
                 }
                 

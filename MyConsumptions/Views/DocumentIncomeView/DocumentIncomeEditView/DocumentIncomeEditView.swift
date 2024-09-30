@@ -62,6 +62,14 @@ struct DocumentIncomeEditView: View {
                     .onTapGesture {
                         self.editState = state
                     }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                        Button("Удалить") {
+                            withAnimation {
+                                self.viewModel.deleteState(cdDocumentIncomeState: state)
+                            }
+                        }
+                        .tint(.red)
+                    }
                     
                 }
                 

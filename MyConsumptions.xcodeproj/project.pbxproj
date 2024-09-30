@@ -334,8 +334,8 @@
 		10F8893F2CAADBF600DB4899 /* DocumentConsumptionEditView */ = {
 			isa = PBXGroup;
 			children = (
-				10F8893D2CAADBF600DB4899 /* DocumentConsumptionEditView.swift */,
 				10F8893E2CAADBF600DB4899 /* DocumentConsumptionEditViewModel.swift */,
+				10F8893D2CAADBF600DB4899 /* DocumentConsumptionEditView.swift */,
 			);
 			path = DocumentConsumptionEditView;
 			sourceTree = "<group>";
@@ -746,7 +746,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"MyConsumptions/Preview Content\"";
 				DEVELOPMENT_TEAM = KTV28US9SX;
 				ENABLE_PREVIEWS = YES;
@@ -779,7 +779,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"MyConsumptions/Preview Content\"";
 				DEVELOPMENT_TEAM = KTV28US9SX;
 				ENABLE_PREVIEWS = YES;
