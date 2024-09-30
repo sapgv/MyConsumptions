@@ -1,23 +1,23 @@
 //
-//  DocumentIncomeEditView.swift
+//  DocumentConsumptionEditView.swift
 //  MoneyApp
 //
-//  Created by Grigory Sapogov on 28.07.2024.
+//  Created by Grigory Sapogov on 30.09.2024.
 //
 
 import SwiftUI
 
-struct DocumentIncomeEditView: View {
+struct DocumentConsumptionEditView: View {
     
     @EnvironmentObject var coordinator: Coordinator
     
-    @StateObject var viewModel: DocumentIncomeEditViewModel
+    @StateObject var viewModel: DocumentConsumptionEditViewModel
     
     var objectType: ObjectType
     
     @State private var addNewState: Bool = false
     
-    @State private var editState: CDDocumentIncomeState?
+    @State private var editState: CDDocumentConsumptionState?
     
     var body: some View {
         
@@ -27,13 +27,13 @@ struct DocumentIncomeEditView: View {
             
                 DatePicker(
                     "Дата",
-                    selection: $viewModel.cdDocumentIncome.date.defaultValue(.now),
+                    selection: $viewModel.cdDocumentConsumption.date.defaultValue(.now),
                     displayedComponents: [.hourAndMinute, .date]
                 )
                 
-                NavigationLink(value: Coordinator.DocumentIncomeEditView.selectWallet) {
+                NavigationLink(value: Coordinator.DocumentConsumptionEditView.selectWallet) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(viewModel.cdDocumentIncome.cdCatalogWallet?.name ?? "")
+                        Text(viewModel.cdDocumentConsumption.cdCatalogWallet?.name ?? "")
                         Text("Кошелек")
                             .foregroundStyle(.secondary)
                     }
@@ -45,11 +45,11 @@ struct DocumentIncomeEditView: View {
             
             Section {
                 
-                ForEach(viewModel.cdDocumentIncome.cdDocumentIncomeStates) { state in
+                ForEach(viewModel.cdDocumentConsumption.cdDocumentConsumptionStates) { state in
                     
                     HStack {
                         VStack(alignment: .leading, spacing: 8, content: {
-                            Text(state.cdIncomeState?.name ?? "")
+                            Text(state.cdConsumptionState?.name ?? "")
                                 .contentShape(Rectangle())
                             if let comment = state.comment {
                                 Text(comment)
@@ -60,7 +60,7 @@ struct DocumentIncomeEditView: View {
                         Spacer()
                         ValueView(value: state.value?.decimalValue)
                             .font(.title)
-                            .foregroundStyle(.income)
+                            .foregroundStyle(.consumption)
                     }
                     .contentShape(Rectangle())
                     .onTapGesture {
@@ -85,7 +85,7 @@ struct DocumentIncomeEditView: View {
             
             Section {
                 
-                CommentTextView(text: $viewModel.cdDocumentIncome.comment.defaultValue(""))
+                CommentTextView(text: $viewModel.cdDocumentConsumption.comment.defaultValue(""))
                     .frame(minHeight: 100)
 
             }
@@ -108,24 +108,24 @@ struct DocumentIncomeEditView: View {
             }
         }
         .sheet(isPresented: $addNewState, content: {
-            let viewModel = DocumentIncomeStateEditViewModel(viewContext: self.viewModel.createChildContext())
-            DocumentIncomeStateEditView(viewModel: viewModel) { cdDocumentIncomeState in
-                self.viewModel.addState(cdDocumentIncomeState: cdDocumentIncomeState)
+            let viewModel = DocumentConsumptionStateEditViewModel(viewContext: self.viewModel.createChildContext())
+            DocumentConsumptionStateEditView(viewModel: viewModel) { cdDocumentConsumptionState in
+                self.viewModel.addState(cdDocumentConsumptionState: cdDocumentConsumptionState)
                 self.addNewState = false
             }
         })
         .sheet(item: $editState, content: { state in
-            let viewModel = DocumentIncomeStateEditViewModel(id: state.objectID, viewContext: self.viewModel.createChildContext())
-            DocumentIncomeStateEditView(viewModel: viewModel) { _ in
+            let viewModel = DocumentConsumptionStateEditViewModel(id: state.objectID, viewContext: self.viewModel.createChildContext())
+            DocumentConsumptionStateEditView(viewModel: viewModel) { _ in
                 self.editState = nil
                 self.viewModel.refresh()
             }
         })
         .navigationTitle(objectType.editTitle)
-        .navigationDestination(for: Coordinator.DocumentIncomeEditView.self) { route in
+        .navigationDestination(for: Coordinator.DocumentConsumptionEditView.self) { route in
             switch route {
             case .selectWallet:
-                CatalogCommonSelectListView<CDCatalogWallet>(objectType: .catalogWallet, selected: self.viewModel.cdDocumentIncome.cdCatalogWallet) { cdWallet in
+                CatalogCommonSelectListView<CDCatalogWallet>(objectType: .catalogWallet, selected: self.viewModel.cdDocumentConsumption.cdCatalogWallet) { cdWallet in
                     self.viewModel.updateWallet(cdWallet: cdWallet)
                 }
             default:
@@ -137,6 +137,6 @@ struct DocumentIncomeEditView: View {
 }
 
 #Preview {
-    let viewModel = DocumentIncomeEditViewModel()
-    return DocumentIncomeEditView(viewModel: viewModel, objectType: .documentIncome)
+    let viewModel = DocumentConsumptionEditViewModel()
+    return DocumentConsumptionEditView(viewModel: viewModel, objectType: .documentConsumption)
 }

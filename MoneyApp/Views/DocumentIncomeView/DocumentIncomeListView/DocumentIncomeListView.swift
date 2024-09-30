@@ -45,7 +45,6 @@ struct DocumentIncomeListView: View {
             
         })
         
-        
     }
     
 }

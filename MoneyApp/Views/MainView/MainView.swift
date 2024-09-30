@@ -23,6 +23,10 @@ struct MainView: View {
                         Text(ObjectType.documentIncome.listTitle)
                     }
                     
+                    NavigationLink(value: Coordinator.MainView.documentConsumption) {
+                        Text(ObjectType.documentConsumption.listTitle)
+                    }
+                    
                 }
                 header: {
                     Text("Документы")
@@ -56,12 +60,14 @@ struct MainView: View {
                 }
 
             }
-            .navigationTitle("Main")
+            .navigationTitle("Операции")
             .navigationDestination(for: Coordinator.MainView.self) { route in
                 
                 switch route {
                 case .documentIncome:
                     DocumentIncomeListView(objectType: .documentIncome)
+                case .documentConsumption:
+                    DocumentConsumptionListView(objectType: .documentConsumption)
                 case .catalogStateIncome:
                     CatalogCommonListView<CDCatalogStateIncome>(objectType: .catalogStateIncome)
                 case .catalogStateConsumption:

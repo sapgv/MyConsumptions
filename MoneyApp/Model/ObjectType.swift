@@ -10,6 +10,7 @@ import Foundation
 enum ObjectType: String {
     
     case documentIncome
+    case documentConsumption
     case catalogStateIncome
     case catalogStateConsumption
     case catalogContact
@@ -20,6 +21,8 @@ enum ObjectType: String {
         switch self {
         case .documentIncome:
             return "Доход"
+        case .documentConsumption:
+            return "Расход"
         case .catalogStateIncome:
             return "Статьи дохода"
         case .catalogStateConsumption:
@@ -37,6 +40,8 @@ enum ObjectType: String {
         switch self {
         case .documentIncome:
             return "Доход"
+        case .documentConsumption:
+            return "Расход"
         case .catalogStateIncome:
             return "Статья дохода"
         case .catalogStateConsumption:

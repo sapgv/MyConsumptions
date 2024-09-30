@@ -24,7 +24,6 @@ extension CDDocumentIncome {
         set {
             self.cdDocumentIncomeStates_ = NSOrderedSet(array: newValue)
         }
-        
     }
     
 }

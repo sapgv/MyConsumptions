@@ -10,6 +10,13 @@
 		1021C4122C6930C20057D33B /* Extensions.Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021C4112C6930C20057D33B /* Extensions.Color.swift */; };
 		102B1D532C7A27B3009D4692 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B1D522C7A27B3009D4692 /* TextView.swift */; };
 		102B1D552C7A392E009D4692 /* Extension.Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B1D542C7A392E009D4692 /* Extension.Font.swift */; };
+		1051B31B2CAAB5C100A85569 /* DocumentConsumptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B31A2CAAB5C100A85569 /* DocumentConsumptionListView.swift */; };
+		1051B31D2CAAB7A400A85569 /* DocumentConsumptionListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B31C2CAAB7A400A85569 /* DocumentConsumptionListRowView.swift */; };
+		1051B31F2CAAB9B900A85569 /* CDDocumentConsumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B31E2CAAB9B900A85569 /* CDDocumentConsumption.swift */; };
+		1051B3222CAABA2200A85569 /* DocumentConsumptionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B3212CAABA2200A85569 /* DocumentConsumptionEditView.swift */; };
+		1051B3242CAABA3700A85569 /* DocumentConsumptionEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B3232CAABA3700A85569 /* DocumentConsumptionEditViewModel.swift */; };
+		1051B3272CAABCD600A85569 /* DocumentConsumptionStateEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B3262CAABCD600A85569 /* DocumentConsumptionStateEditView.swift */; };
+		1051B3292CAABCDD00A85569 /* DocumentConsumptionStateEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B3282CAABCDD00A85569 /* DocumentConsumptionStateEditViewModel.swift */; };
 		106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */; };
 		1060120B2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */; };
 		1060120D2C4A815A006D3EF2 /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120C2C4A815A006D3EF2 /* SubtitleView.swift */; };
@@ -62,6 +69,13 @@
 		1021C4112C6930C20057D33B /* Extensions.Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.Color.swift; sourceTree = "<group>"; };
 		102B1D522C7A27B3009D4692 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		102B1D542C7A392E009D4692 /* Extension.Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.Font.swift; sourceTree = "<group>"; };
+		1051B31A2CAAB5C100A85569 /* DocumentConsumptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentConsumptionListView.swift; sourceTree = "<group>"; };
+		1051B31C2CAAB7A400A85569 /* DocumentConsumptionListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentConsumptionListRowView.swift; sourceTree = "<group>"; };
+		1051B31E2CAAB9B900A85569 /* CDDocumentConsumption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDocumentConsumption.swift; sourceTree = "<group>"; };
+		1051B3212CAABA2200A85569 /* DocumentConsumptionEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentConsumptionEditView.swift; sourceTree = "<group>"; };
+		1051B3232CAABA3700A85569 /* DocumentConsumptionEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentConsumptionEditViewModel.swift; sourceTree = "<group>"; };
+		1051B3262CAABCD600A85569 /* DocumentConsumptionStateEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentConsumptionStateEditView.swift; sourceTree = "<group>"; };
+		1051B3282CAABCDD00A85569 /* DocumentConsumptionStateEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentConsumptionStateEditViewModel.swift; sourceTree = "<group>"; };
 		106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditView.swift; sourceTree = "<group>"; };
 		1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditViewModel.swift; sourceTree = "<group>"; };
 		1060120C2C4A815A006D3EF2 /* SubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleView.swift; sourceTree = "<group>"; };
@@ -122,6 +136,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1051B3182CAAB59D00A85569 /* DocumentConsumptionView */ = {
+			isa = PBXGroup;
+			children = (
+				1051B3252CAABCB900A85569 /* DocumentConsumptionStateEditView */,
+				1051B3202CAABA1400A85569 /* DocumentConsumptionEditView */,
+				1051B3192CAAB5B200A85569 /* DocumentConsumptionListView */,
+			);
+			path = DocumentConsumptionView;
+			sourceTree = "<group>";
+		};
+		1051B3192CAAB5B200A85569 /* DocumentConsumptionListView */ = {
+			isa = PBXGroup;
+			children = (
+				1051B31A2CAAB5C100A85569 /* DocumentConsumptionListView.swift */,
+				1051B31C2CAAB7A400A85569 /* DocumentConsumptionListRowView.swift */,
+			);
+			path = DocumentConsumptionListView;
+			sourceTree = "<group>";
+		};
+		1051B3202CAABA1400A85569 /* DocumentConsumptionEditView */ = {
+			isa = PBXGroup;
+			children = (
+				1051B3232CAABA3700A85569 /* DocumentConsumptionEditViewModel.swift */,
+				1051B3212CAABA2200A85569 /* DocumentConsumptionEditView.swift */,
+			);
+			path = DocumentConsumptionEditView;
+			sourceTree = "<group>";
+		};
+		1051B3252CAABCB900A85569 /* DocumentConsumptionStateEditView */ = {
+			isa = PBXGroup;
+			children = (
+				1051B3282CAABCDD00A85569 /* DocumentConsumptionStateEditViewModel.swift */,
+				1051B3262CAABCD600A85569 /* DocumentConsumptionStateEditView.swift */,
+			);
+			path = DocumentConsumptionStateEditView;
+			sourceTree = "<group>";
+		};
 		106012062C4A7FCB006D3EF2 /* CatalogDebtView */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +295,7 @@
 			children = (
 				1088FD982C5682B800B67845 /* CommonView */,
 				1088FD7E2C566E9C00B67845 /* DocumentIncomeView */,
+				1051B3182CAAB59D00A85569 /* DocumentConsumptionView */,
 				106012062C4A7FCB006D3EF2 /* CatalogDebtView */,
 				10FF93BC2C44EF7300037C21 /* EditNameView */,
 				10E90A862BBBE8780049C929 /* MainView */,
@@ -299,6 +351,7 @@
 				10FF93C12C44F97D00037C21 /* CDCatalogName.swift */,
 				106012102C4A8C4C006D3EF2 /* CDCatalogDebt.swift */,
 				1088FD852C56724F00B67845 /* CDDocumentIncome.swift */,
+				1051B31E2CAAB9B900A85569 /* CDDocumentConsumption.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -449,8 +502,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1088FD802C566EB500B67845 /* DocumentIncomeListView.swift in Sources */,
+				1051B3292CAABCDD00A85569 /* DocumentConsumptionStateEditViewModel.swift in Sources */,
+				1051B31F2CAAB9B900A85569 /* CDDocumentConsumption.swift in Sources */,
 				102B1D532C7A27B3009D4692 /* TextView.swift in Sources */,
 				10A4DC5A2C35C532000392E9 /* EditNameView.swift in Sources */,
+				1051B31B2CAAB5C100A85569 /* DocumentConsumptionListView.swift in Sources */,
 				10A4DC582C35BCBF000392E9 /* CoreDataStackPreview.swift in Sources */,
 				10C9D22F2C76619200D3C517 /* ValueView.swift in Sources */,
 				10E90A902BBBEA880049C929 /* ObjectType.swift in Sources */,
@@ -467,9 +523,11 @@
 				1088FD7D2C56613F00B67845 /* CatalogCommonSelectListView.swift in Sources */,
 				1060120D2C4A815A006D3EF2 /* SubtitleView.swift in Sources */,
 				1088FD9C2C56885E00B67845 /* TextFieldDecimal.swift in Sources */,
+				1051B3242CAABA3700A85569 /* DocumentConsumptionEditViewModel.swift in Sources */,
 				10DD72B42C7CEBAD0068C695 /* CommentView.swift in Sources */,
 				10E90AA12BBBED0A0049C929 /* StoreType.swift in Sources */,
 				106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */,
+				1051B31D2CAAB7A400A85569 /* DocumentConsumptionListRowView.swift in Sources */,
 				10E90AA22BBBED0A0049C929 /* CoreDataStack.swift in Sources */,
 				1088FD822C566EC300B67845 /* DocumentIncomeListViewModel.swift in Sources */,
 				1088FD9A2C5682D400B67845 /* CommentTextView.swift in Sources */,
@@ -477,6 +535,7 @@
 				106012112C4A8C4C006D3EF2 /* CDCatalogDebt.swift in Sources */,
 				10E90AA42BBBED1B0049C929 /* Model.swift in Sources */,
 				1088FDA42C568A0C00B67845 /* DecimalValueRow.swift in Sources */,
+				1051B3222CAABA2200A85569 /* DocumentConsumptionEditView.swift in Sources */,
 				10E90A8D2BBBE9010049C929 /* Model.xcdatamodeld in Sources */,
 				10E90A892BBBE89A0049C929 /* CatalogStateIncomeListView.swift in Sources */,
 				10E90AA92BBBEF250049C929 /* Extensions.swift in Sources */,
@@ -484,6 +543,7 @@
 				10E90A822BBBE8050049C929 /* Coordinator.swift in Sources */,
 				10FF93C52C455D2800037C21 /* CatalogCommonEditView.swift in Sources */,
 				1088FD8B2C56761600B67845 /* DocumentIncomeEditViewModel.swift in Sources */,
+				1051B3272CAABCD600A85569 /* DocumentConsumptionStateEditView.swift in Sources */,
 				10E90AA02BBBED0A0049C929 /* CoreData + Extensions.swift in Sources */,
 				1060120B2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift in Sources */,
 				10FF93C72C455D8200037C21 /* CatalogCommonEditViewModel.swift in Sources */,
