@@ -69,6 +69,7 @@
 		10F8899B2CAADBF600DB4899 /* DocumentTransferListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889562CAADBF600DB4899 /* DocumentTransferListView.swift */; };
 		10F8899C2CAADBF600DB4899 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889592CAADBF600DB4899 /* EditNameView.swift */; };
 		10F8899D2CAADBF600DB4899 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F8895B2CAADBF600DB4899 /* MainView.swift */; };
+		10FFB6BA2CAAF65A004A2A5C /* CatalogCommonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FFB6B92CAAF659004A2A5C /* CatalogCommonListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 		10F889562CAADBF600DB4899 /* DocumentTransferListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentTransferListView.swift; sourceTree = "<group>"; };
 		10F889592CAADBF600DB4899 /* EditNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		10F8895B2CAADBF600DB4899 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		10FFB6B92CAAF659004A2A5C /* CatalogCommonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCommonListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 		10F889272CAADBF600DB4899 /* CatalogCommonListView */ = {
 			isa = PBXGroup;
 			children = (
+				10FFB6B92CAAF659004A2A5C /* CatalogCommonListViewModel.swift */,
 				10F889252CAADBF600DB4899 /* CatalogCommonListView.swift */,
 				10F889262CAADBF600DB4899 /* CatalogCommonSelectListView.swift */,
 			);
@@ -364,8 +367,8 @@
 		10F889492CAADBF600DB4899 /* DocumentIncomeEditView */ = {
 			isa = PBXGroup;
 			children = (
-				10F889472CAADBF600DB4899 /* DocumentIncomeEditView.swift */,
 				10F889482CAADBF600DB4899 /* DocumentIncomeEditViewModel.swift */,
+				10F889472CAADBF600DB4899 /* DocumentIncomeEditView.swift */,
 			);
 			path = DocumentIncomeEditView;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				10F889972CAADBF600DB4899 /* DocumentIncomeStateEditViewModel.swift in Sources */,
 				10F889792CAADBF600DB4899 /* CatalogCommonEditView.swift in Sources */,
 				10F889902CAADBF600DB4899 /* DocumentConsumptionStateEditViewModel.swift in Sources */,
+				10FFB6BA2CAAF65A004A2A5C /* CatalogCommonListViewModel.swift in Sources */,
 				10F889622CAADBF600DB4899 /* CDCatalogDebt.swift in Sources */,
 				10F8898D2CAADBF600DB4899 /* DocumentConsumptionListRowView.swift in Sources */,
 				10F8899B2CAADBF600DB4899 /* DocumentTransferListView.swift in Sources */,

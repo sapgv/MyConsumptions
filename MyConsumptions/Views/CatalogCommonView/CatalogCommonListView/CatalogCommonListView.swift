@@ -16,12 +16,22 @@ struct CatalogCommonListView<T: CDCatalogName>: View {
 
     var objectType: ObjectType
     
+    var viewModel: CatalogCommonListViewModel<T>
+    
     var body: some View {
         
         List(list) { catalog in
             
             NavigationLink(value: Coordinator.CatalogCommonListView.edit(objectID: catalog.objectID)) {
                 Text(catalog.name ?? "")
+            }
+            .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                Button("Удалить") {
+                    withAnimation {
+                        self.viewModel.delete(cdCatalog: catalog)
+                    }
+                }
+                .tint(.red)
             }
             
         }
@@ -65,5 +75,5 @@ struct CatalogCommonListView<T: CDCatalogName>: View {
 }
 
 #Preview {
-    CatalogCommonListView<CDCatalogStateIncome>(objectType: ObjectType.catalogStateIncome)
+    CatalogCommonListView<CDCatalogStateIncome>(objectType: ObjectType.catalogStateIncome, viewModel: CatalogCommonListViewModel<CDCatalogStateIncome>())
 }

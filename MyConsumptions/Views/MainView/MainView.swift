@@ -75,15 +75,15 @@ struct MainView: View {
                 case .documentTransfer:
                     DocumentTransferListView(objectType: .documentTransfer)
                 case .catalogStateIncome:
-                    CatalogCommonListView<CDCatalogStateIncome>(objectType: .catalogStateIncome)
+                    CatalogCommonListView<CDCatalogStateIncome>(objectType: .catalogStateIncome, viewModel: CatalogCommonListViewModel<CDCatalogStateIncome>())
                 case .catalogStateConsumption:
-                    CatalogCommonListView<CDCatalogStateConsumption>(objectType: .catalogStateConsumption)
+                    CatalogCommonListView<CDCatalogStateConsumption>(objectType: .catalogStateConsumption, viewModel: CatalogCommonListViewModel<CDCatalogStateConsumption>())
                 case .catalogContact:
-                    CatalogCommonListView<CDCatalogContact>(objectType: .catalogContact)
+                    CatalogCommonListView<CDCatalogContact>(objectType: .catalogContact, viewModel: CatalogCommonListViewModel<CDCatalogContact>())
                 case .catalogDebt:
-                    CatalogCommonListView<CDCatalogDebt>(objectType: .catalogDebt)
+                    CatalogCommonListView<CDCatalogDebt>(objectType: .catalogDebt, viewModel: CatalogCommonListViewModel<CDCatalogDebt>())
                 case .catalogWallet:
-                    CatalogCommonListView<CDCatalogWallet>(objectType: .catalogWallet)
+                    CatalogCommonListView<CDCatalogWallet>(objectType: .catalogWallet, viewModel: CatalogCommonListViewModel<CDCatalogWallet>())
                 }
                 
             }
