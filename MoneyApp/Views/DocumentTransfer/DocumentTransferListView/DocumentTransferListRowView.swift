@@ -46,7 +46,7 @@ struct DocumentTransferListRowView: View {
                 if let walletFrom = walletFrom {
                     VStack(alignment: .leading) {
                         Text(walletFrom)
-                        Text("Откуда")
+                        Text("Кошелек откуда")
                             .foregroundStyle(.secondary)
                     }
                 }
@@ -54,7 +54,7 @@ struct DocumentTransferListRowView: View {
                 if let walletTo = walletTo {
                     VStack(alignment: .trailing) {
                         Text(walletTo)
-                        Text("Куда")
+                        Text("Кошелек куда")
                             .foregroundStyle(.secondary)
                     }
                 }

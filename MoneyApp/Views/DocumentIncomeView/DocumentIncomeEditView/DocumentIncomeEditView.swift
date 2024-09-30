@@ -25,11 +25,7 @@ struct DocumentIncomeEditView: View {
             
             Section {
             
-                DatePicker(
-                    "Дата",
-                    selection: $viewModel.cdDocumentIncome.date.defaultValue(.now),
-                    displayedComponents: [.hourAndMinute, .date]
-                )
+                DocumentDatePicker(date: $viewModel.cdDocumentIncome.date)
                 
                 NavigationLink(value: Coordinator.DocumentIncomeEditView.selectWallet) {
                     VStack(alignment: .leading, spacing: 8) {

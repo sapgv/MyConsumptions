@@ -21,11 +21,7 @@ struct DocumentTransferEditView: View {
             
             Section {
             
-                DatePicker(
-                    "Дата",
-                    selection: $viewModel.cdDocumentTransfer.date.defaultValue(.now),
-                    displayedComponents: [.hourAndMinute, .date]
-                )
+                DocumentDatePicker(date: $viewModel.cdDocumentTransfer.date)
                 
                 NavigationLink(value: Coordinator.DocumentTransferEditView.selectWalletFrom) {
                     VStack(alignment: .leading, spacing: 8) {

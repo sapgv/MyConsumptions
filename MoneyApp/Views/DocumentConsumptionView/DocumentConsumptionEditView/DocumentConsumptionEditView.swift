@@ -25,11 +25,7 @@ struct DocumentConsumptionEditView: View {
             
             Section {
             
-                DatePicker(
-                    "Дата",
-                    selection: $viewModel.cdDocumentConsumption.date.defaultValue(.now),
-                    displayedComponents: [.hourAndMinute, .date]
-                )
+                DocumentDatePicker(date: $viewModel.cdDocumentConsumption.date)
                 
                 NavigationLink(value: Coordinator.DocumentConsumptionEditView.selectWallet) {
                     VStack(alignment: .leading, spacing: 8) {

@@ -22,6 +22,7 @@
 		1051B3312CAAC2EE00A85569 /* CDDocumentTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B3302CAAC2EE00A85569 /* CDDocumentTransfer.swift */; };
 		1051B3342CAAC37700A85569 /* DocumentTransferEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B3332CAAC37700A85569 /* DocumentTransferEditView.swift */; };
 		1051B3362CAAC37E00A85569 /* DocumentTransferEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B3352CAAC37E00A85569 /* DocumentTransferEditViewModel.swift */; };
+		1051B3382CAACBDF00A85569 /* DocumentDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B3372CAACBDF00A85569 /* DocumentDatePicker.swift */; };
 		106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */; };
 		1060120B2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */; };
 		1060120D2C4A815A006D3EF2 /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060120C2C4A815A006D3EF2 /* SubtitleView.swift */; };
@@ -86,6 +87,7 @@
 		1051B3302CAAC2EE00A85569 /* CDDocumentTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDocumentTransfer.swift; sourceTree = "<group>"; };
 		1051B3332CAAC37700A85569 /* DocumentTransferEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTransferEditView.swift; sourceTree = "<group>"; };
 		1051B3352CAAC37E00A85569 /* DocumentTransferEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTransferEditViewModel.swift; sourceTree = "<group>"; };
+		1051B3372CAACBDF00A85569 /* DocumentDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDatePicker.swift; sourceTree = "<group>"; };
 		106012082C4A8007006D3EF2 /* CatalogDebtEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditView.swift; sourceTree = "<group>"; };
 		1060120A2C4A8010006D3EF2 /* CatalogDebtEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDebtEditViewModel.swift; sourceTree = "<group>"; };
 		1060120C2C4A815A006D3EF2 /* SubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleView.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				1060120C2C4A815A006D3EF2 /* SubtitleView.swift */,
 				10C9D22E2C76619200D3C517 /* ValueView.swift */,
 				10DD72B32C7CEBAD0068C695 /* CommentView.swift */,
+				1051B3372CAACBDF00A85569 /* DocumentDatePicker.swift */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				10DD72B42C7CEBAD0068C695 /* CommentView.swift in Sources */,
 				10E90AA12BBBED0A0049C929 /* StoreType.swift in Sources */,
 				106012092C4A8007006D3EF2 /* CatalogDebtEditView.swift in Sources */,
+				1051B3382CAACBDF00A85569 /* DocumentDatePicker.swift in Sources */,
 				1051B3312CAAC2EE00A85569 /* CDDocumentTransfer.swift in Sources */,
 				1051B31D2CAAB7A400A85569 /* DocumentConsumptionListRowView.swift in Sources */,
 				1051B3342CAAC37700A85569 /* DocumentTransferEditView.swift in Sources */,
