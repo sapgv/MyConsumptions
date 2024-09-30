@@ -15,12 +15,22 @@ struct DocumentConsumptionListView: View {
 
     var objectType: ObjectType
     
+    var viewModel: DocumentConsumptionListViewModel
+    
     var body: some View {
         
         List(list) { document in
             
             NavigationLink(value: Coordinator.DocumentConsumptionListView.edit(objectID: document.objectID)) {
                 DocumentConsumptionListRowView(date: document.date, wallet: document.cdCatalogWallet?.name, value: document.value, stateComment: document.stateComment, comment: document.comment)
+            }
+            .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                Button("Удалить") {
+                    withAnimation {
+                        self.viewModel.delete(cdDocument: document)
+                    }
+                }
+                .tint(.red)
             }
             
         }
@@ -50,5 +60,5 @@ struct DocumentConsumptionListView: View {
 }
 
 #Preview {
-    DocumentConsumptionListView(objectType: .documentConsumption)
+    DocumentConsumptionListView(objectType: .documentConsumption, viewModel: DocumentConsumptionListViewModel())
 }

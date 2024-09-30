@@ -70,6 +70,8 @@
 		10F8899C2CAADBF600DB4899 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889592CAADBF600DB4899 /* EditNameView.swift */; };
 		10F8899D2CAADBF600DB4899 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F8895B2CAADBF600DB4899 /* MainView.swift */; };
 		10FFB6BA2CAAF65A004A2A5C /* CatalogCommonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FFB6B92CAAF659004A2A5C /* CatalogCommonListViewModel.swift */; };
+		10FFB6BE2CAAFAC3004A2A5C /* DocumentConsumptionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FFB6BD2CAAFAC3004A2A5C /* DocumentConsumptionListViewModel.swift */; };
+		10FFB6C02CAAFB3D004A2A5C /* DocumentTransferListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FFB6BF2CAAFB3D004A2A5C /* DocumentTransferListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +139,8 @@
 		10F889592CAADBF600DB4899 /* EditNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		10F8895B2CAADBF600DB4899 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		10FFB6B92CAAF659004A2A5C /* CatalogCommonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCommonListViewModel.swift; sourceTree = "<group>"; };
+		10FFB6BD2CAAFAC3004A2A5C /* DocumentConsumptionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentConsumptionListViewModel.swift; sourceTree = "<group>"; };
+		10FFB6BF2CAAFB3D004A2A5C /* DocumentTransferListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTransferListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,8 +343,9 @@
 		10F889422CAADBF600DB4899 /* DocumentConsumptionListView */ = {
 			isa = PBXGroup;
 			children = (
-				10F889402CAADBF600DB4899 /* DocumentConsumptionListRowView.swift */,
+				10FFB6BD2CAAFAC3004A2A5C /* DocumentConsumptionListViewModel.swift */,
 				10F889412CAADBF600DB4899 /* DocumentConsumptionListView.swift */,
+				10F889402CAADBF600DB4899 /* DocumentConsumptionListRowView.swift */,
 			);
 			path = DocumentConsumptionListView;
 			sourceTree = "<group>";
@@ -376,9 +381,9 @@
 		10F8894D2CAADBF600DB4899 /* DocumentIncomeListView */ = {
 			isa = PBXGroup;
 			children = (
-				10F8894A2CAADBF600DB4899 /* DocumentIncomeListRowView.swift */,
-				10F8894B2CAADBF600DB4899 /* DocumentIncomeListView.swift */,
 				10F8894C2CAADBF600DB4899 /* DocumentIncomeListViewModel.swift */,
+				10F8894B2CAADBF600DB4899 /* DocumentIncomeListView.swift */,
+				10F8894A2CAADBF600DB4899 /* DocumentIncomeListRowView.swift */,
 			);
 			path = DocumentIncomeListView;
 			sourceTree = "<group>";
@@ -414,8 +419,9 @@
 		10F889572CAADBF600DB4899 /* DocumentTransferListView */ = {
 			isa = PBXGroup;
 			children = (
-				10F889552CAADBF600DB4899 /* DocumentTransferListRowView.swift */,
+				10FFB6BF2CAAFB3D004A2A5C /* DocumentTransferListViewModel.swift */,
 				10F889562CAADBF600DB4899 /* DocumentTransferListView.swift */,
+				10F889552CAADBF600DB4899 /* DocumentTransferListRowView.swift */,
 			);
 			path = DocumentTransferListView;
 			sourceTree = "<group>";
@@ -555,6 +561,7 @@
 				10F889942CAADBF600DB4899 /* DocumentIncomeListView.swift in Sources */,
 				10F8897A2CAADBF600DB4899 /* CatalogCommonEditViewModel.swift in Sources */,
 				10F8898F2CAADBF600DB4899 /* DocumentConsumptionStateEditView.swift in Sources */,
+				10FFB6BE2CAAFAC3004A2A5C /* DocumentConsumptionListViewModel.swift in Sources */,
 				10F8897F2CAADBF600DB4899 /* CatalogStateIncomeEditView.swift in Sources */,
 				10F8898C2CAADBF600DB4899 /* DocumentConsumptionEditViewModel.swift in Sources */,
 				10F8896A2CAADBF600DB4899 /* CoreDataStackPreview.swift in Sources */,
@@ -566,6 +573,7 @@
 				10F8898A2CAADBF600DB4899 /* ValueView.swift in Sources */,
 				10F889822CAADBF600DB4899 /* CommentTextView.swift in Sources */,
 				10F889932CAADBF600DB4899 /* DocumentIncomeListRowView.swift in Sources */,
+				10FFB6C02CAAFB3D004A2A5C /* DocumentTransferListViewModel.swift in Sources */,
 				10F8897C2CAADBF600DB4899 /* CatalogCommonSelectListView.swift in Sources */,
 				10F889962CAADBF600DB4899 /* DocumentIncomeStateEditView.swift in Sources */,
 				10F889852CAADBF600DB4899 /* DecimalValueRow.swift in Sources */,

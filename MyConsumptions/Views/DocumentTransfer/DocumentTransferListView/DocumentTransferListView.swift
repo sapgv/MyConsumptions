@@ -15,12 +15,22 @@ struct DocumentTransferListView: View {
 
     var objectType: ObjectType
     
+    var viewModel: DocumentTransferListViewModel
+    
     var body: some View {
         
         List(list) { document in
             
             NavigationLink(value: Coordinator.DocumentTransferListView.edit(objectID: document.objectID)) {
                 DocumentTransferListRowView(date: document.date, walletFrom: document.cdCatalogWalletFrom?.name, walletTo: document.cdCatalogWalletTo?.name, value: document.value?.decimalValue ?? 0, comment: document.comment)
+            }
+            .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                Button("Удалить") {
+                    withAnimation {
+                        self.viewModel.delete(cdDocument: document)
+                    }
+                }
+                .tint(.red)
             }
             
         }
@@ -50,5 +60,5 @@ struct DocumentTransferListView: View {
 }
 
 #Preview {
-    DocumentTransferListView(objectType: .documentTransfer)
+    DocumentTransferListView(objectType: .documentTransfer, viewModel: DocumentTransferListViewModel())
 }

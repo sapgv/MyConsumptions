@@ -69,11 +69,11 @@ struct MainView: View {
                 
                 switch route {
                 case .documentIncome:
-                    DocumentIncomeListView(objectType: .documentIncome)
+                    DocumentIncomeListView(objectType: .documentIncome, viewModel: DocumentIncomeListViewModel())
                 case .documentConsumption:
-                    DocumentConsumptionListView(objectType: .documentConsumption)
+                    DocumentConsumptionListView(objectType: .documentConsumption, viewModel: DocumentConsumptionListViewModel())
                 case .documentTransfer:
-                    DocumentTransferListView(objectType: .documentTransfer)
+                    DocumentTransferListView(objectType: .documentTransfer, viewModel: DocumentTransferListViewModel())
                 case .catalogStateIncome:
                     CatalogCommonListView<CDCatalogStateIncome>(objectType: .catalogStateIncome, viewModel: CatalogCommonListViewModel<CDCatalogStateIncome>())
                 case .catalogStateConsumption:

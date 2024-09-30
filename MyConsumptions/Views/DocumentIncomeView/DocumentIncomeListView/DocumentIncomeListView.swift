@@ -15,12 +15,22 @@ struct DocumentIncomeListView: View {
 
     var objectType: ObjectType
     
+    var viewModel: DocumentIncomeListViewModel
+    
     var body: some View {
         
         List(list) { document in
             
             NavigationLink(value: Coordinator.DocumentIncomeListView.edit(objectID: document.objectID)) {
                 DocumentIncomeListRowView(date: document.date, wallet: document.cdCatalogWallet?.name, value: document.value, stateComment: document.stateComment, comment: document.comment)
+            }
+            .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                Button("Удалить") {
+                    withAnimation {
+                        self.viewModel.delete(cdDocument: document)
+                    }
+                }
+                .tint(.red)
             }
             
         }
@@ -50,5 +60,5 @@ struct DocumentIncomeListView: View {
 }
 
 #Preview {
-    DocumentIncomeListView(objectType: .documentIncome)
+    DocumentIncomeListView(objectType: .documentIncome, viewModel: DocumentIncomeListViewModel())
 }
