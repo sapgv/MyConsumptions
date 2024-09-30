@@ -1,5 +1,5 @@
 //
-//  MoneyAppApp.swift
+//  MyConsumptionsApp.swift
 //  MoneyApp
 //
 //  Created by Grigory Sapogov on 02.04.2024.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct MoneyAppApp: App {
+struct MyConsumptionsApp: App {
     
     @StateObject private var coordinator: Coordinator = Coordinator()
     

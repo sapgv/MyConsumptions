@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10CE65CE2CAADD70002F4ECB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10CE65CC2CAADD70002F4ECB /* Model.xcdatamodeld */; };
-		10F889602CAADBF600DB4899 /* MoneyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889022CAADBF600DB4899 /* MoneyAppApp.swift */; };
+		10F889602CAADBF600DB4899 /* MyConsumptionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889022CAADBF600DB4899 /* MyConsumptionsApp.swift */; };
 		10F889612CAADBF600DB4899 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889042CAADBF600DB4899 /* Coordinator.swift */; };
 		10F889622CAADBF600DB4899 /* CDCatalogDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889062CAADBF600DB4899 /* CDCatalogDebt.swift */; };
 		10F889632CAADBF600DB4899 /* CDCatalogName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889072CAADBF600DB4899 /* CDCatalogName.swift */; };
@@ -74,7 +74,7 @@
 /* Begin PBXFileReference section */
 		10CE65CD2CAADD70002F4ECB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MyConsumptions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyConsumptions.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		10F889022CAADBF600DB4899 /* MoneyAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyAppApp.swift; sourceTree = "<group>"; };
+		10F889022CAADBF600DB4899 /* MyConsumptionsApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConsumptionsApp.swift; sourceTree = "<group>"; };
 		10F889042CAADBF600DB4899 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		10F889062CAADBF600DB4899 /* CDCatalogDebt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCatalogDebt.swift; sourceTree = "<group>"; };
 		10F889072CAADBF600DB4899 /* CDCatalogName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCatalogName.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		10F889032CAADBF600DB4899 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				10F889022CAADBF600DB4899 /* MoneyAppApp.swift */,
+				10F889022CAADBF600DB4899 /* MyConsumptionsApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -576,7 +576,7 @@
 				10F889992CAADBF600DB4899 /* DocumentTransferEditViewModel.swift in Sources */,
 				10F8896E2CAADBF600DB4899 /* Extension.Font.swift in Sources */,
 				10F889742CAADBF600DB4899 /* DebtType.swift in Sources */,
-				10F889602CAADBF600DB4899 /* MoneyAppApp.swift in Sources */,
+				10F889602CAADBF600DB4899 /* MyConsumptionsApp.swift in Sources */,
 				10F889872CAADBF600DB4899 /* SubtitleView.swift in Sources */,
 				10F889832CAADBF600DB4899 /* CommentView.swift in Sources */,
 				10F889722CAADBF600DB4899 /* Extensions.String.swift in Sources */,
