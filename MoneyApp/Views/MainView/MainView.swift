@@ -27,6 +27,10 @@ struct MainView: View {
                         Text(ObjectType.documentConsumption.listTitle)
                     }
                     
+                    NavigationLink(value: Coordinator.MainView.documentTransfer) {
+                        Text(ObjectType.documentTransfer.listTitle)
+                    }
+                    
                 }
                 header: {
                     Text("Документы")
@@ -68,6 +72,8 @@ struct MainView: View {
                     DocumentIncomeListView(objectType: .documentIncome)
                 case .documentConsumption:
                     DocumentConsumptionListView(objectType: .documentConsumption)
+                case .documentTransfer:
+                    DocumentTransferListView(objectType: .documentTransfer)
                 case .catalogStateIncome:
                     CatalogCommonListView<CDCatalogStateIncome>(objectType: .catalogStateIncome)
                 case .catalogStateConsumption:

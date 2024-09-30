@@ -11,6 +11,8 @@ struct DecimalValueRow: View {
     
     @Binding var value: NSDecimalNumber?
     
+    var valueForegroundStyle: Color
+    
     var body: some View {
         
         HStack {
@@ -18,7 +20,7 @@ struct DecimalValueRow: View {
             Spacer()
             TextFieldDecimal(value: $value)
                 .font(.title)
-                .foregroundStyle(.income)
+                .foregroundStyle(valueForegroundStyle)
                
         }
         
@@ -28,7 +30,7 @@ struct DecimalValueRow: View {
 #Preview {
     NavigationStack {
         List {
-            DecimalValueRow(value: .constant(1000))
+            DecimalValueRow(value: .constant(1000), valueForegroundStyle: .income)
         }
     }
 }

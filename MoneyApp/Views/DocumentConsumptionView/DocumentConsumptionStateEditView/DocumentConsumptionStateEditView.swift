@@ -33,7 +33,7 @@ struct DocumentConsumptionStateEditView: View {
                 
                 Section {
                     
-                    DecimalValueRow(value: $viewModel.cdDocumentConsumptionState.value)
+                    DecimalValueRow(value: $viewModel.cdDocumentConsumptionState.value, valueForegroundStyle: .consumption)
                     
                 }
                 

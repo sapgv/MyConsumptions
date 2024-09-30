@@ -21,6 +21,8 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="cdDocumentConsumption_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentConsumption" inverseName="cdCatalogWallet" inverseEntity="CDDocumentConsumption"/>
         <relationship name="cdDocumentIncome_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentIncome" inverseName="cdCatalogWallet" inverseEntity="CDDocumentIncome"/>
+        <relationship name="cdDocumentTransferFrom_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentTransfer" inverseName="cdCatalogWalletFrom" inverseEntity="CDDocumentTransfer"/>
+        <relationship name="cdDocumentTransferTo_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentTransfer" inverseName="cdCatalogWalletTo" inverseEntity="CDDocumentTransfer"/>
     </entity>
     <entity name="CDDocumentConsumption" representedClassName="CDDocumentConsumption" syncable="YES" codeGenerationType="class">
         <attribute name="comment" optional="YES" attributeType="String"/>
@@ -45,5 +47,12 @@
         <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <relationship name="cdDocumentIncome" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDDocumentIncome" inverseName="cdDocumentIncomeStates_" inverseEntity="CDDocumentIncome"/>
         <relationship name="cdIncomeState" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogStateIncome" inverseName="cdDocumentIncomeState_" inverseEntity="CDCatalogStateIncome"/>
+    </entity>
+    <entity name="CDDocumentTransfer" representedClassName="CDDocumentTransfer" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="cdCatalogWalletFrom" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogWallet" inverseName="cdDocumentTransferFrom_" inverseEntity="CDCatalogWallet"/>
+        <relationship name="cdCatalogWalletTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogWallet" inverseName="cdDocumentTransferTo_" inverseEntity="CDCatalogWallet"/>
     </entity>
 </model>

@@ -11,6 +11,7 @@ enum ObjectType: String {
     
     case documentIncome
     case documentConsumption
+    case documentTransfer
     case catalogStateIncome
     case catalogStateConsumption
     case catalogContact
@@ -23,6 +24,8 @@ enum ObjectType: String {
             return "Доход"
         case .documentConsumption:
             return "Расход"
+        case .documentTransfer:
+            return "Перемещение"
         case .catalogStateIncome:
             return "Статьи дохода"
         case .catalogStateConsumption:
@@ -42,6 +45,8 @@ enum ObjectType: String {
             return "Доход"
         case .documentConsumption:
             return "Расход"
+        case .documentTransfer:
+            return "Перемещение"
         case .catalogStateIncome:
             return "Статья дохода"
         case .catalogStateConsumption:

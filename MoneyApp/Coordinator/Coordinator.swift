@@ -20,6 +20,7 @@ extension Coordinator {
     enum MainView {
         case documentIncome
         case documentConsumption
+        case documentTransfer
         case catalogStateIncome
         case catalogStateConsumption
         case catalogContact
@@ -71,6 +72,16 @@ extension Coordinator {
     enum DocumentConsumptionEditView: Hashable {
         case selectWallet
         case selectConsumptionState(objectId: NSManagedObjectID)
+    }
+    
+    enum DocumentTransferListView: Hashable {
+        case new
+        case edit(objectID: NSManagedObjectID)
+    }
+    
+    enum DocumentTransferEditView: Hashable {
+        case selectWalletFrom
+        case selectWalletTo
     }
     
 }

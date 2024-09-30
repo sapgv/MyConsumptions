@@ -33,7 +33,7 @@ struct DocumentIncomeStateEditView: View {
                 
                 Section {
                     
-                    DecimalValueRow(value: $viewModel.cdDocumentIncomeState.value)
+                    DecimalValueRow(value: $viewModel.cdDocumentIncomeState.value, valueForegroundStyle: .income)
                     
                 }
                 
