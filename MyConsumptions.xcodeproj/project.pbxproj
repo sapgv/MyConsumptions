@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10CE65CE2CAADD70002F4ECB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10CE65CC2CAADD70002F4ECB /* Model.xcdatamodeld */; };
 		10F889602CAADBF600DB4899 /* MoneyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889022CAADBF600DB4899 /* MoneyAppApp.swift */; };
 		10F889612CAADBF600DB4899 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889042CAADBF600DB4899 /* Coordinator.swift */; };
 		10F889622CAADBF600DB4899 /* CDCatalogDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889062CAADBF600DB4899 /* CDCatalogDebt.swift */; };
@@ -18,7 +19,6 @@
 		10F889682CAADBF600DB4899 /* CoreDataStack.Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F8890C2CAADBF600DB4899 /* CoreDataStack.Log.swift */; };
 		10F889692CAADBF600DB4899 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F8890D2CAADBF600DB4899 /* CoreDataStack.swift */; };
 		10F8896A2CAADBF600DB4899 /* CoreDataStackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F8890E2CAADBF600DB4899 /* CoreDataStackPreview.swift */; };
-		10F8896B2CAADBF600DB4899 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10F8890F2CAADBF600DB4899 /* Model.xcdatamodeld */; };
 		10F8896C2CAADBF600DB4899 /* SaveStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889102CAADBF600DB4899 /* SaveStatus.swift */; };
 		10F8896D2CAADBF600DB4899 /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889112CAADBF600DB4899 /* StoreType.swift */; };
 		10F8896E2CAADBF600DB4899 /* Extension.Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889132CAADBF600DB4899 /* Extension.Font.swift */; };
@@ -72,6 +72,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10CE65CD2CAADD70002F4ECB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MyConsumptions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyConsumptions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F889022CAADBF600DB4899 /* MoneyAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyAppApp.swift; sourceTree = "<group>"; };
 		10F889042CAADBF600DB4899 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -134,7 +135,6 @@
 		10F889562CAADBF600DB4899 /* DocumentTransferListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentTransferListView.swift; sourceTree = "<group>"; };
 		10F889592CAADBF600DB4899 /* EditNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
 		10F8895B2CAADBF600DB4899 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		10F8895F2CAADBF600DB4899 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +183,7 @@
 		10F889122CAADBF600DB4899 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				10CE65CC2CAADD70002F4ECB /* Model.xcdatamodeld */,
 				10F889062CAADBF600DB4899 /* CDCatalogDebt.swift */,
 				10F889072CAADBF600DB4899 /* CDCatalogName.swift */,
 				10F889082CAADBF600DB4899 /* CDDocumentConsumption.swift */,
@@ -192,7 +193,6 @@
 				10F8890C2CAADBF600DB4899 /* CoreDataStack.Log.swift */,
 				10F8890D2CAADBF600DB4899 /* CoreDataStack.swift */,
 				10F8890E2CAADBF600DB4899 /* CoreDataStackPreview.swift */,
-				10F8890F2CAADBF600DB4899 /* Model.xcdatamodeld */,
 				10F889102CAADBF600DB4899 /* SaveStatus.swift */,
 				10F889112CAADBF600DB4899 /* StoreType.swift */,
 			);
@@ -590,6 +590,7 @@
 				10F889952CAADBF600DB4899 /* DocumentIncomeListViewModel.swift in Sources */,
 				10F889682CAADBF600DB4899 /* CoreDataStack.Log.swift in Sources */,
 				10F8897E2CAADBF600DB4899 /* CatalogDebtEditViewModel.swift in Sources */,
+				10CE65CE2CAADD70002F4ECB /* Model.xcdatamodeld in Sources */,
 				10F889802CAADBF600DB4899 /* CatalogStateIncomeEditViewModel.swift in Sources */,
 				10F889732CAADBF600DB4899 /* Extensions.swift in Sources */,
 				10F889842CAADBF600DB4899 /* DecimalTextField.swift in Sources */,
@@ -602,7 +603,6 @@
 				10F8899B2CAADBF600DB4899 /* DocumentTransferListView.swift in Sources */,
 				10F889752CAADBF600DB4899 /* Model.swift in Sources */,
 				10F8896F2CAADBF600DB4899 /* Extensions.Color.swift in Sources */,
-				10F8896B2CAADBF600DB4899 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,14 +818,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		10F8890F2CAADBF600DB4899 /* Model.xcdatamodeld */ = {
+		10CE65CC2CAADD70002F4ECB /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				10F8895F2CAADBF600DB4899 /* Model.xcdatamodel */,
+				10CE65CD2CAADD70002F4ECB /* Model.xcdatamodel */,
 			);
-			currentVersion = 10F8895F2CAADBF600DB4899 /* Model.xcdatamodel */;
+			currentVersion = 10CE65CD2CAADD70002F4ECB /* Model.xcdatamodel */;
 			name = Model.xcdatamodeld;
-			path = /Users/sapogov/Projects/PersonalProjects/MoneyApp/MyConsumptions/CoreData/Model.xcdatamodeld;
+			path = /Users/sapogov/Projects/PersonalProjects/MyConsumptions/MyConsumptions/CoreData/Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
