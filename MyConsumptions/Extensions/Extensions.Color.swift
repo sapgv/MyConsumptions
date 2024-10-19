@@ -25,4 +25,20 @@ extension Color {
         .secondary
     }
     
+    static var giveDebt: Color {
+        .red
+    }
+    
+    static var giveDebtReturn: Color {
+        .green
+    }
+    
+    static var takeDebt: Color {
+        .green
+    }
+    
+    static var takeDebtReturn: Color {
+        .red
+    }
+    
 }

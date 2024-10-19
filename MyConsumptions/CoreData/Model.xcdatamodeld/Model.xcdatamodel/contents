@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23H124" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="23H124" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="CDCatalogContact" representedClassName="CDCatalogContact" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="cdDebts_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDCatalogDebt" inverseName="cdContact" inverseEntity="CDCatalogDebt"/>
+        <relationship name="cdDocumentGiveDebt_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentGiveDebt" inverseName="cdContact" inverseEntity="CDDocumentGiveDebt"/>
+        <relationship name="cdDocumentGiveDebtReturn_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentGiveDebtReturn" inverseName="cdContact" inverseEntity="CDDocumentGiveDebtReturn"/>
     </entity>
     <entity name="CDCatalogDebt" representedClassName="CDCatalogDebt" syncable="YES" codeGenerationType="class">
         <attribute name="debtType_" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="cdContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogContact" inverseName="cdDebts_" inverseEntity="CDCatalogContact"/>
+        <relationship name="cdDocumentGiveDebt_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentGiveDebt" inverseName="cdDebt" inverseEntity="CDDocumentGiveDebt"/>
+        <relationship name="cdDocumentGiveDebtReturn_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDDocumentGiveDebtReturn" inverseName="cdDebt" inverseEntity="CDDocumentGiveDebtReturn"/>
     </entity>
     <entity name="CDCatalogStateConsumption" representedClassName="CDCatalogStateConsumption" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -35,6 +39,20 @@
         <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <relationship name="cdConsumptionState" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogStateConsumption" inverseName="cdDocumentConsumptionState_" inverseEntity="CDCatalogStateConsumption"/>
         <relationship name="cdDocumentConsumption" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDDocumentConsumption" inverseName="cdDocumentConsumptionStates_" inverseEntity="CDDocumentConsumption"/>
+    </entity>
+    <entity name="CDDocumentGiveDebt" representedClassName="CDDocumentGiveDebt" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="cdContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogContact" inverseName="cdDocumentGiveDebt_" inverseEntity="CDCatalogContact"/>
+        <relationship name="cdDebt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogDebt" inverseName="cdDocumentGiveDebt_" inverseEntity="CDCatalogDebt"/>
+    </entity>
+    <entity name="CDDocumentGiveDebtReturn" representedClassName="CDDocumentGiveDebtReturn" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="cdContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogContact" inverseName="cdDocumentGiveDebtReturn_" inverseEntity="CDCatalogContact"/>
+        <relationship name="cdDebt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCatalogDebt" inverseName="cdDocumentGiveDebtReturn_" inverseEntity="CDCatalogDebt"/>
     </entity>
     <entity name="CDDocumentIncome" representedClassName="CDDocumentIncome" syncable="YES" codeGenerationType="class">
         <attribute name="comment" optional="YES" attributeType="String"/>

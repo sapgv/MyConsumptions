@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10204E202CC3C510006A1A1E /* DocumentGiveDebtListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10204E1F2CC3C510006A1A1E /* DocumentGiveDebtListView.swift */; };
+		10204E232CC3C51E006A1A1E /* DocumentGiveDebtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10204E222CC3C51E006A1A1E /* DocumentGiveDebtListViewModel.swift */; };
+		10204E252CC3C5C9006A1A1E /* DocumentGiveDebtListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10204E242CC3C5C9006A1A1E /* DocumentGiveDebtListRowView.swift */; };
+		10204E282CC3C71E006A1A1E /* DocumentGiveDebtEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10204E272CC3C71E006A1A1E /* DocumentGiveDebtEditView.swift */; };
+		10204E2A2CC3C725006A1A1E /* DocumentGiveDebtEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10204E292CC3C725006A1A1E /* DocumentGiveDebtEditViewModel.swift */; };
 		10CE65CE2CAADD70002F4ECB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10CE65CC2CAADD70002F4ECB /* Model.xcdatamodeld */; };
 		10F889602CAADBF600DB4899 /* MyConsumptionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889022CAADBF600DB4899 /* MyConsumptionsApp.swift */; };
 		10F889612CAADBF600DB4899 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889042CAADBF600DB4899 /* Coordinator.swift */; };
@@ -75,6 +80,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10204E1F2CC3C510006A1A1E /* DocumentGiveDebtListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentGiveDebtListView.swift; sourceTree = "<group>"; };
+		10204E222CC3C51E006A1A1E /* DocumentGiveDebtListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentGiveDebtListViewModel.swift; sourceTree = "<group>"; };
+		10204E242CC3C5C9006A1A1E /* DocumentGiveDebtListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentGiveDebtListRowView.swift; sourceTree = "<group>"; };
+		10204E272CC3C71E006A1A1E /* DocumentGiveDebtEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentGiveDebtEditView.swift; sourceTree = "<group>"; };
+		10204E292CC3C725006A1A1E /* DocumentGiveDebtEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentGiveDebtEditViewModel.swift; sourceTree = "<group>"; };
 		10CE65CD2CAADD70002F4ECB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MyConsumptions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyConsumptions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F889022CAADBF600DB4899 /* MyConsumptionsApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConsumptionsApp.swift; sourceTree = "<group>"; };
@@ -154,6 +164,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10204E1B2CC3C4A1006A1A1E /* CatalogViews */ = {
+			isa = PBXGroup;
+			children = (
+				10F889282CAADBF600DB4899 /* CatalogCommonView */,
+				10F8892C2CAADBF600DB4899 /* CatalogDebtView */,
+				10F889322CAADBF600DB4899 /* CatalogStateIncomeView */,
+			);
+			path = CatalogViews;
+			sourceTree = "<group>";
+		};
+		10204E1C2CC3C4C7006A1A1E /* DocumentViews */ = {
+			isa = PBXGroup;
+			children = (
+				10204E1D2CC3C4E9006A1A1E /* DocumentGiveDebtView */,
+				10F889462CAADBF600DB4899 /* DocumentConsumptionView */,
+				10F889512CAADBF600DB4899 /* DocumentIncomeView */,
+				10F889582CAADBF600DB4899 /* DocumentTransferView */,
+			);
+			path = DocumentViews;
+			sourceTree = "<group>";
+		};
+		10204E1D2CC3C4E9006A1A1E /* DocumentGiveDebtView */ = {
+			isa = PBXGroup;
+			children = (
+				10204E1E2CC3C4FF006A1A1E /* DocumentGiveDebtListView */,
+				10204E262CC3C70D006A1A1E /* DocumentGiveDebtEditView */,
+			);
+			path = DocumentGiveDebtView;
+			sourceTree = "<group>";
+		};
+		10204E1E2CC3C4FF006A1A1E /* DocumentGiveDebtListView */ = {
+			isa = PBXGroup;
+			children = (
+				10204E222CC3C51E006A1A1E /* DocumentGiveDebtListViewModel.swift */,
+				10204E1F2CC3C510006A1A1E /* DocumentGiveDebtListView.swift */,
+				10204E242CC3C5C9006A1A1E /* DocumentGiveDebtListRowView.swift */,
+			);
+			path = DocumentGiveDebtListView;
+			sourceTree = "<group>";
+		};
+		10204E262CC3C70D006A1A1E /* DocumentGiveDebtEditView */ = {
+			isa = PBXGroup;
+			children = (
+				10204E292CC3C725006A1A1E /* DocumentGiveDebtEditViewModel.swift */,
+				10204E272CC3C71E006A1A1E /* DocumentGiveDebtEditView.swift */,
+			);
+			path = DocumentGiveDebtEditView;
+			sourceTree = "<group>";
+		};
 		10E90A662BBBE6B50049C929 = {
 			isa = PBXGroup;
 			children = (
@@ -315,7 +374,7 @@
 			path = CatalogStateIncomeView;
 			sourceTree = "<group>";
 		};
-		10F8893C2CAADBF600DB4899 /* CommonView */ = {
+		10F8893C2CAADBF600DB4899 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
 				10F889332CAADBF600DB4899 /* CommentTextView.swift */,
@@ -327,8 +386,9 @@
 				10F889392CAADBF600DB4899 /* TextFieldDecimal.swift */,
 				10F8893A2CAADBF600DB4899 /* TextView.swift */,
 				10F8893B2CAADBF600DB4899 /* ValueView.swift */,
+				10F889592CAADBF600DB4899 /* EditNameView.swift */,
 			);
-			path = CommonView;
+			path = CommonViews;
 			sourceTree = "<group>";
 		};
 		10F8893F2CAADBF600DB4899 /* DocumentConsumptionEditView */ = {
@@ -410,8 +470,8 @@
 		10F889542CAADBF600DB4899 /* DocumentTransferEditView */ = {
 			isa = PBXGroup;
 			children = (
-				10F889522CAADBF600DB4899 /* DocumentTransferEditView.swift */,
 				10F889532CAADBF600DB4899 /* DocumentTransferEditViewModel.swift */,
+				10F889522CAADBF600DB4899 /* DocumentTransferEditView.swift */,
 			);
 			path = DocumentTransferEditView;
 			sourceTree = "<group>";
@@ -426,21 +486,13 @@
 			path = DocumentTransferListView;
 			sourceTree = "<group>";
 		};
-		10F889582CAADBF600DB4899 /* DocumentTransfer */ = {
+		10F889582CAADBF600DB4899 /* DocumentTransferView */ = {
 			isa = PBXGroup;
 			children = (
-				10F889542CAADBF600DB4899 /* DocumentTransferEditView */,
 				10F889572CAADBF600DB4899 /* DocumentTransferListView */,
+				10F889542CAADBF600DB4899 /* DocumentTransferEditView */,
 			);
-			path = DocumentTransfer;
-			sourceTree = "<group>";
-		};
-		10F8895A2CAADBF600DB4899 /* EditNameView */ = {
-			isa = PBXGroup;
-			children = (
-				10F889592CAADBF600DB4899 /* EditNameView.swift */,
-			);
-			path = EditNameView;
+			path = DocumentTransferView;
 			sourceTree = "<group>";
 		};
 		10F8895C2CAADBF600DB4899 /* MainView */ = {
@@ -454,15 +506,10 @@
 		10F8895D2CAADBF600DB4899 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				10F889282CAADBF600DB4899 /* CatalogCommonView */,
-				10F8892C2CAADBF600DB4899 /* CatalogDebtView */,
-				10F889322CAADBF600DB4899 /* CatalogStateIncomeView */,
-				10F8893C2CAADBF600DB4899 /* CommonView */,
-				10F889462CAADBF600DB4899 /* DocumentConsumptionView */,
-				10F889512CAADBF600DB4899 /* DocumentIncomeView */,
-				10F889582CAADBF600DB4899 /* DocumentTransfer */,
-				10F8895A2CAADBF600DB4899 /* EditNameView */,
 				10F8895C2CAADBF600DB4899 /* MainView */,
+				10F8893C2CAADBF600DB4899 /* CommonViews */,
+				10204E1B2CC3C4A1006A1A1E /* CatalogViews */,
+				10204E1C2CC3C4C7006A1A1E /* DocumentViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -557,6 +604,7 @@
 				10F8897B2CAADBF600DB4899 /* CatalogCommonListView.swift in Sources */,
 				10F889612CAADBF600DB4899 /* Coordinator.swift in Sources */,
 				10F889762CAADBF600DB4899 /* ObjectType.swift in Sources */,
+				10204E2A2CC3C725006A1A1E /* DocumentGiveDebtEditViewModel.swift in Sources */,
 				10F8896C2CAADBF600DB4899 /* SaveStatus.swift in Sources */,
 				10F889942CAADBF600DB4899 /* DocumentIncomeListView.swift in Sources */,
 				10F8897A2CAADBF600DB4899 /* CatalogCommonEditViewModel.swift in Sources */,
@@ -586,6 +634,7 @@
 				10F889692CAADBF600DB4899 /* CoreDataStack.swift in Sources */,
 				10F889992CAADBF600DB4899 /* DocumentTransferEditViewModel.swift in Sources */,
 				10F8896E2CAADBF600DB4899 /* Extension.Font.swift in Sources */,
+				10204E232CC3C51E006A1A1E /* DocumentGiveDebtListViewModel.swift in Sources */,
 				10F889742CAADBF600DB4899 /* DebtType.swift in Sources */,
 				10F889602CAADBF600DB4899 /* MyConsumptionsApp.swift in Sources */,
 				10F889872CAADBF600DB4899 /* SubtitleView.swift in Sources */,
@@ -598,6 +647,7 @@
 				10F889912CAADBF600DB4899 /* DocumentIncomeEditView.swift in Sources */,
 				10F889922CAADBF600DB4899 /* DocumentIncomeEditViewModel.swift in Sources */,
 				10F8899A2CAADBF600DB4899 /* DocumentTransferListRowView.swift in Sources */,
+				10204E282CC3C71E006A1A1E /* DocumentGiveDebtEditView.swift in Sources */,
 				10F889952CAADBF600DB4899 /* DocumentIncomeListViewModel.swift in Sources */,
 				10F889682CAADBF600DB4899 /* CoreDataStack.Log.swift in Sources */,
 				10F8897E2CAADBF600DB4899 /* CatalogDebtEditViewModel.swift in Sources */,
@@ -609,11 +659,13 @@
 				10F889972CAADBF600DB4899 /* DocumentIncomeStateEditViewModel.swift in Sources */,
 				10F889792CAADBF600DB4899 /* CatalogCommonEditView.swift in Sources */,
 				10F889902CAADBF600DB4899 /* DocumentConsumptionStateEditViewModel.swift in Sources */,
+				10204E202CC3C510006A1A1E /* DocumentGiveDebtListView.swift in Sources */,
 				10FFB6BA2CAAF65A004A2A5C /* CatalogCommonListViewModel.swift in Sources */,
 				10F889622CAADBF600DB4899 /* CDCatalogDebt.swift in Sources */,
 				10F8898D2CAADBF600DB4899 /* DocumentConsumptionListRowView.swift in Sources */,
 				10F8899B2CAADBF600DB4899 /* DocumentTransferListView.swift in Sources */,
 				10F889752CAADBF600DB4899 /* Model.swift in Sources */,
+				10204E252CC3C5C9006A1A1E /* DocumentGiveDebtListRowView.swift in Sources */,
 				10F8896F2CAADBF600DB4899 /* Extensions.Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

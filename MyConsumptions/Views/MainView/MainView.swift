@@ -38,6 +38,17 @@ struct MainView: View {
                 
                 Section {
                     
+                    NavigationLink(value: Coordinator.MainView.documentGiveDebt) {
+                        Text(ObjectType.documentGiveDebt.listTitle)
+                    }
+                    
+                }
+                header: {
+                    Text("Долги")
+                }
+                
+                Section {
+                    
                     NavigationLink(value: Coordinator.MainView.catalogStateIncome) {
                         Text(ObjectType.catalogStateIncome.listTitle)
                     }
@@ -74,6 +85,8 @@ struct MainView: View {
                     DocumentConsumptionListView(objectType: .documentConsumption, viewModel: DocumentConsumptionListViewModel())
                 case .documentTransfer:
                     DocumentTransferListView(objectType: .documentTransfer, viewModel: DocumentTransferListViewModel())
+                case .documentGiveDebt:
+                    DocumentGiveDebtListView(objectType: .documentGiveDebt, viewModel: DocumentGiveDebtListViewModel())
                 case .catalogStateIncome:
                     CatalogCommonListView<CDCatalogStateIncome>(objectType: .catalogStateIncome, viewModel: CatalogCommonListViewModel<CDCatalogStateIncome>())
                 case .catalogStateConsumption:

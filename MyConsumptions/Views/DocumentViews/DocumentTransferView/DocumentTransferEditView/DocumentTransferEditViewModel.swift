@@ -61,11 +61,6 @@ final class DocumentTransferEditViewModel: ObservableObject {
         self.cdDocumentTransfer.cdCatalogWalletTo = cdWallet
     }
     
-    func createChildContext() -> NSManagedObjectContext {
-        let viewContext = Model.coreData.createChildContext(from: self.viewContext, concurrencyType: .mainQueueConcurrencyType)
-        return viewContext
-    }
-    
     func refresh() {
         self.viewContext.refreshAllObjects()
     }
