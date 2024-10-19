@@ -275,8 +275,8 @@
 		10F8892B2CAADBF600DB4899 /* CatalogDebtEditView */ = {
 			isa = PBXGroup;
 			children = (
-				10F889292CAADBF600DB4899 /* CatalogDebtEditView.swift */,
 				10F8892A2CAADBF600DB4899 /* CatalogDebtEditViewModel.swift */,
+				10F889292CAADBF600DB4899 /* CatalogDebtEditView.swift */,
 			);
 			path = CatalogDebtEditView;
 			sourceTree = "<group>";

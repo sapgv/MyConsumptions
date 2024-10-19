@@ -32,9 +32,9 @@ struct CatalogDebtEditView: View {
                     Text("Тип долга")
                         .foregroundStyle(.secondary)
                     
-                    Picker("", selection: $viewModel.cdCatalogDebt.debtType_) {
-                        ForEach(DebtType.allCases.map { $0.title }, id: \.self) { debtType in
-                            Text(debtType)
+                    Picker("", selection: $viewModel.cdCatalogDebt.debtType) {
+                        ForEach(DebtType.allCases, id: \.self) { debtType in
+                            Text(debtType.title)
                                 .foregroundStyle(Color.red)
                                 .tag(Optional(debtType))
                             
