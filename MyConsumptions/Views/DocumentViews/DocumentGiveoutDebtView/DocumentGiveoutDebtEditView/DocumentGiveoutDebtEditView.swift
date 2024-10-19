@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct DocumentGiveDebtEditView: View {
+struct DocumentGiveoutDebtEditView: View {
     
     @EnvironmentObject var coordinator: Coordinator
     
-    @StateObject var viewModel: DocumentGiveDebtEditViewModel
+    @StateObject var viewModel: DocumentGiveoutDebtEditViewModel
     
     var objectType: ObjectType
     
@@ -23,7 +23,7 @@ struct DocumentGiveDebtEditView: View {
             
                 DocumentDatePicker(date: $viewModel.cdDocument.date)
                 
-                NavigationLink(value: Coordinator.DocumentGiveDebtEditView.selectContact) {
+                NavigationLink(value: Coordinator.DocumentGiveoutDebtEditView.selectContact) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(viewModel.cdDocument.cdContact?.name ?? "")
                         Text("Контакт")
@@ -33,7 +33,7 @@ struct DocumentGiveDebtEditView: View {
                 }
                 .listRowBackground(Color(UIColor.systemBackground))
                 
-                NavigationLink(value: Coordinator.DocumentGiveDebtEditView.selectDebt) {
+                NavigationLink(value: Coordinator.DocumentGiveoutDebtEditView.selectDebt) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(viewModel.cdDocument.cdDebt?.name ?? "")
                         Text("Кошелек куда")
@@ -47,7 +47,7 @@ struct DocumentGiveDebtEditView: View {
             
             Section {
                 
-                DecimalValueRow(value: $viewModel.cdDocument.value, valueForegroundStyle: .giveDebt)
+                DecimalValueRow(value: $viewModel.cdDocument.value, valueForegroundStyle: .consumption)
                 
             }
             
@@ -76,7 +76,7 @@ struct DocumentGiveDebtEditView: View {
             }
         }
         .navigationTitle(objectType.editTitle)
-        .navigationDestination(for: Coordinator.DocumentGiveDebtEditView.self) { route in
+        .navigationDestination(for: Coordinator.DocumentGiveoutDebtEditView.self) { route in
             switch route {
             case .selectContact:
                 CatalogCommonSelectListView<CDCatalogContact>(objectType: .catalogContact, selected: self.viewModel.cdDocument.cdContact) { cdContact in

@@ -9,36 +9,20 @@ import SwiftUI
 
 extension Color {
     
-    static var incomeColor: Color {
+    static var income: Color {
         .green
     }
     
-    static var consumptionColor: Color {
+    static var consumption: Color {
         .red
     }
     
-    static var transferColor: Color {
+    static var transfer: Color {
         .yellow
     }
     
-    static var commentColor: Color {
+    static var comment: Color {
         .secondary
-    }
-    
-    static var giveDebt: Color {
-        .red
-    }
-    
-    static var giveDebtReturn: Color {
-        .green
-    }
-    
-    static var takeDebt: Color {
-        .green
-    }
-    
-    static var takeDebtReturn: Color {
-        .red
     }
     
 }

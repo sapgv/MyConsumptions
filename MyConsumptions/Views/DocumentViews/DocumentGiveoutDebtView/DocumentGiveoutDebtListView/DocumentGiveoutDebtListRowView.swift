@@ -1,5 +1,5 @@
 //
-//  DocumentGiveDebtListRowView.swift
+//  DocumentGiveoutDebtListRowView.swift
 //  MyConsumptions
 //
 //  Created by Grigory Sapogov on 19.10.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DocumentGiveDebtListRowView: View {
+struct DocumentGiveoutDebtListRowView: View {
     
     var date: Date?
     
@@ -64,7 +64,7 @@ struct DocumentGiveDebtListRowView: View {
         
         List {
             
-            DocumentTransferListRowView(date: .now, walletFrom: "From", walletTo: "To", value: 1000, comment: "test")
+            DocumentGiveoutDebtListRowView(date: Date(), contact: "Contact", debt: "Devt", value: 1000, comment: "test comment")
             
         }
         

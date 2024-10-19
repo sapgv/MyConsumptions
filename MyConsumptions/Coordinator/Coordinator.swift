@@ -21,7 +21,8 @@ extension Coordinator {
         case documentIncome
         case documentConsumption
         case documentTransfer
-        case documentGiveDebt
+        case documentGiveoutDebt
+        case documentReturnGiveoutDebt
         case catalogStateIncome
         case catalogStateConsumption
         case catalogContact
@@ -85,12 +86,22 @@ extension Coordinator {
         case selectWalletTo
     }
     
-    enum DocumentGiveDebtListView: Hashable {
+    enum DocumentGiveoutDebtListView: Hashable {
         case new
         case edit(objectID: NSManagedObjectID)
     }
     
-    enum DocumentGiveDebtEditView: Hashable {
+    enum DocumentGiveoutDebtEditView: Hashable {
+        case selectContact
+        case selectDebt
+    }
+    
+    enum DocumentReturnGiveoutDebtListView: Hashable {
+        case new
+        case edit(objectID: NSManagedObjectID)
+    }
+    
+    enum DocumentReturnGiveoutDebtEditView: Hashable {
         case selectContact
         case selectDebt
     }

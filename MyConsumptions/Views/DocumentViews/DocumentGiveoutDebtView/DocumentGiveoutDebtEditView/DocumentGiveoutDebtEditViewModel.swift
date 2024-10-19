@@ -1,5 +1,5 @@
 //
-//  DocumentGiveDebtEditViewModel.swift
+//  DocumentGiveoutDebtEditViewModel.swift
 //  MyConsumptions
 //
 //  Created by Grigory Sapogov on 19.10.2024.
@@ -8,11 +8,11 @@
 import CoreData
 import Combine
 
-final class DocumentGiveDebtEditViewModel: ObservableObject {
+final class DocumentGiveoutDebtEditViewModel: ObservableObject {
     
     var saveCompletion: PassthroughSubject<Void, Never> = PassthroughSubject<Void, Never>()
     
-    var cdDocument: CDDocumentGiveDebt
+    var cdDocument: CDDocumentGiveoutDebt
     
     private let viewContext: NSManagedObjectContext
     
@@ -22,11 +22,11 @@ final class DocumentGiveDebtEditViewModel: ObservableObject {
         
         self.viewContext = coreData.createContextFromCoordinator(concurrencyType: .mainQueueConcurrencyType)
         
-        if let id = id, let cdDocument = self.viewContext.objectInContext(CDDocumentGiveDebt.self, objectID: id) {
+        if let id = id, let cdDocument = self.viewContext.objectInContext(CDDocumentGiveoutDebt.self, objectID: id) {
             self.cdDocument = cdDocument
         }
         else {
-            self.cdDocument = CDDocumentGiveDebt(context: self.viewContext)
+            self.cdDocument = CDDocumentGiveoutDebt(context: self.viewContext)
             self.cdDocument.date = .now
         }
         
