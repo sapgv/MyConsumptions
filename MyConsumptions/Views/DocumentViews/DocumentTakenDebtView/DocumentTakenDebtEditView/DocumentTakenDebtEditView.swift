@@ -1,17 +1,17 @@
 //
-//  DocumentGiveDebtEditView.swift
+//  DocumentTakenDebtEditView.swift
 //  MyConsumptions
 //
-//  Created by Grigory Sapogov on 19.10.2024.
+//  Created by Grigory Sapogov on 31.10.2024.
 //
 
 import SwiftUI
 
-struct DocumentGiveoutDebtEditView: View {
+struct DocumentTakenDebtEditView: View {
     
     @EnvironmentObject var coordinator: Coordinator
     
-    @StateObject var viewModel: DocumentGiveoutDebtEditViewModel
+    @StateObject var viewModel: DocumentTakenDebtEditViewModel
     
     var objectType: ObjectType
     
@@ -23,7 +23,7 @@ struct DocumentGiveoutDebtEditView: View {
             
                 DocumentDatePicker(date: $viewModel.cdDocument.date)
                 
-                NavigationLink(value: Coordinator.DocumentGiveoutDebtEditView.selectContact) {
+                NavigationLink(value: Coordinator.DocumentTakenDebtEditView.selectContact) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(viewModel.cdDocument.cdContact?.name ?? "")
                         Text("Контакт")
@@ -33,7 +33,7 @@ struct DocumentGiveoutDebtEditView: View {
                 }
                 .listRowBackground(Color(UIColor.systemBackground))
                 
-                NavigationLink(value: Coordinator.DocumentGiveoutDebtEditView.selectDebt) {
+                NavigationLink(value: Coordinator.DocumentTakenDebtEditView.selectDebt) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(viewModel.cdDocument.cdDebt?.name ?? "")
                         Text("Кошелек куда")
@@ -47,7 +47,7 @@ struct DocumentGiveoutDebtEditView: View {
             
             Section {
                 
-                DecimalValueRow(value: $viewModel.cdDocument.value, valueForegroundStyle: .consumption)
+                DecimalValueRow(value: $viewModel.cdDocument.value, valueForegroundStyle: .income)
                 
             }
             
@@ -76,7 +76,7 @@ struct DocumentGiveoutDebtEditView: View {
             }
         }
         .navigationTitle(objectType.editTitle)
-        .navigationDestination(for: Coordinator.DocumentGiveoutDebtEditView.self) { route in
+        .navigationDestination(for: Coordinator.DocumentTakenDebtEditView.self) { route in
             switch route {
             case .selectContact:
                 CatalogCommonSelectListView<CDCatalogContact>(objectType: .catalogContact, selected: self.viewModel.cdDocument.cdContact) { cdContact in
@@ -93,7 +93,7 @@ struct DocumentGiveoutDebtEditView: View {
 }
 
 #Preview {
-    let viewModel = DocumentGiveoutDebtEditViewModel()
-    return DocumentGiveoutDebtEditView(viewModel: viewModel, objectType: .documentGiveoutDebt)
+    let viewModel = DocumentTakenDebtEditViewModel()
+    return DocumentTakenDebtEditView(viewModel: viewModel, objectType: .documentTakenDebt)
 }
 

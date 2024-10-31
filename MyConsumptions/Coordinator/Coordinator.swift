@@ -12,7 +12,6 @@ final class Coordinator: ObservableObject {
     
     @Published var path = NavigationPath()
     
-    
 }
 
 extension Coordinator {
@@ -23,6 +22,8 @@ extension Coordinator {
         case documentTransfer
         case documentGiveoutDebt
         case documentReturnGiveoutDebt
+        case documentTakenDebt
+        case documentReturnTakenDebt
         case catalogStateIncome
         case catalogStateConsumption
         case catalogContact
@@ -102,6 +103,16 @@ extension Coordinator {
     }
     
     enum DocumentReturnGiveoutDebtEditView: Hashable {
+        case selectContact
+        case selectDebt
+    }
+    
+    enum DocumentTakenDebtListView: Hashable {
+        case new
+        case edit(objectID: NSManagedObjectID)
+    }
+    
+    enum DocumentTakenDebtEditView: Hashable {
         case selectContact
         case selectDebt
     }

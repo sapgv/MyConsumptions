@@ -17,6 +17,11 @@
 		10204E342CC3CB32006A1A1E /* DocumentReturnGiveoutDebtEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10204E332CC3CB32006A1A1E /* DocumentReturnGiveoutDebtEditViewModel.swift */; };
 		10204E362CC3CB38006A1A1E /* DocumentReturnGiveoutDebtEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10204E352CC3CB38006A1A1E /* DocumentReturnGiveoutDebtEditView.swift */; };
 		10B12C632CC3CF7E00D79C55 /* DocumentReturnGiveoutDebtListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B12C622CC3CF7E00D79C55 /* DocumentReturnGiveoutDebtListRowView.swift */; };
+		10BB83E72CD3EB3C00B5FF61 /* DocumentTakenDebtListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB83E62CD3EB3C00B5FF61 /* DocumentTakenDebtListView.swift */; };
+		10BB83E92CD3EB4500B5FF61 /* DocumentTakenDebtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB83E82CD3EB4500B5FF61 /* DocumentTakenDebtListViewModel.swift */; };
+		10BB83EB2CD3EB9F00B5FF61 /* DocumentTakenDebtListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB83EA2CD3EB9F00B5FF61 /* DocumentTakenDebtListRowView.swift */; };
+		10BB83EE2CD3EC1A00B5FF61 /* DocumentTakenDebtEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB83ED2CD3EC1A00B5FF61 /* DocumentTakenDebtEditViewModel.swift */; };
+		10BB83F02CD3EC2200B5FF61 /* DocumentTakenDebtEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB83EF2CD3EC2200B5FF61 /* DocumentTakenDebtEditView.swift */; };
 		10CE65CE2CAADD70002F4ECB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10CE65CC2CAADD70002F4ECB /* Model.xcdatamodeld */; };
 		10F889602CAADBF600DB4899 /* MyConsumptionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889022CAADBF600DB4899 /* MyConsumptionsApp.swift */; };
 		10F889612CAADBF600DB4899 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F889042CAADBF600DB4899 /* Coordinator.swift */; };
@@ -95,6 +100,11 @@
 		10204E332CC3CB32006A1A1E /* DocumentReturnGiveoutDebtEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReturnGiveoutDebtEditViewModel.swift; sourceTree = "<group>"; };
 		10204E352CC3CB38006A1A1E /* DocumentReturnGiveoutDebtEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReturnGiveoutDebtEditView.swift; sourceTree = "<group>"; };
 		10B12C622CC3CF7E00D79C55 /* DocumentReturnGiveoutDebtListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReturnGiveoutDebtListRowView.swift; sourceTree = "<group>"; };
+		10BB83E62CD3EB3C00B5FF61 /* DocumentTakenDebtListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTakenDebtListView.swift; sourceTree = "<group>"; };
+		10BB83E82CD3EB4500B5FF61 /* DocumentTakenDebtListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTakenDebtListViewModel.swift; sourceTree = "<group>"; };
+		10BB83EA2CD3EB9F00B5FF61 /* DocumentTakenDebtListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTakenDebtListRowView.swift; sourceTree = "<group>"; };
+		10BB83ED2CD3EC1A00B5FF61 /* DocumentTakenDebtEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTakenDebtEditViewModel.swift; sourceTree = "<group>"; };
+		10BB83EF2CD3EC2200B5FF61 /* DocumentTakenDebtEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTakenDebtEditView.swift; sourceTree = "<group>"; };
 		10CE65CD2CAADD70002F4ECB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		10E90A6F2BBBE6B50049C929 /* MyConsumptions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyConsumptions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F889022CAADBF600DB4899 /* MyConsumptionsApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConsumptionsApp.swift; sourceTree = "<group>"; };
@@ -192,6 +202,7 @@
 				10F889582CAADBF600DB4899 /* DocumentTransferView */,
 				10204E1D2CC3C4E9006A1A1E /* DocumentGiveoutDebtView */,
 				10204E2B2CC3CAE4006A1A1E /* DocumentReturnGiveoutDebtView */,
+				10BB83E42CD3EB1A00B5FF61 /* DocumentTakenDebtView */,
 			);
 			path = DocumentViews;
 			sourceTree = "<group>";
@@ -250,6 +261,34 @@
 				10204E352CC3CB38006A1A1E /* DocumentReturnGiveoutDebtEditView.swift */,
 			);
 			path = DocumentReturnGiveoutDebtEditView;
+			sourceTree = "<group>";
+		};
+		10BB83E42CD3EB1A00B5FF61 /* DocumentTakenDebtView */ = {
+			isa = PBXGroup;
+			children = (
+				10BB83E52CD3EB2D00B5FF61 /* DocumentTakenDebtListView */,
+				10BB83EC2CD3EC0700B5FF61 /* DocumentTakenDebtEditView */,
+			);
+			path = DocumentTakenDebtView;
+			sourceTree = "<group>";
+		};
+		10BB83E52CD3EB2D00B5FF61 /* DocumentTakenDebtListView */ = {
+			isa = PBXGroup;
+			children = (
+				10BB83E82CD3EB4500B5FF61 /* DocumentTakenDebtListViewModel.swift */,
+				10BB83E62CD3EB3C00B5FF61 /* DocumentTakenDebtListView.swift */,
+				10BB83EA2CD3EB9F00B5FF61 /* DocumentTakenDebtListRowView.swift */,
+			);
+			path = DocumentTakenDebtListView;
+			sourceTree = "<group>";
+		};
+		10BB83EC2CD3EC0700B5FF61 /* DocumentTakenDebtEditView */ = {
+			isa = PBXGroup;
+			children = (
+				10BB83ED2CD3EC1A00B5FF61 /* DocumentTakenDebtEditViewModel.swift */,
+				10BB83EF2CD3EC2200B5FF61 /* DocumentTakenDebtEditView.swift */,
+			);
+			path = DocumentTakenDebtEditView;
 			sourceTree = "<group>";
 		};
 		10E90A662BBBE6B50049C929 = {
@@ -662,8 +701,11 @@
 				10F889642CAADBF600DB4899 /* CDDocumentConsumption.swift in Sources */,
 				10F8898A2CAADBF600DB4899 /* ValueView.swift in Sources */,
 				10F889822CAADBF600DB4899 /* CommentTextView.swift in Sources */,
+				10BB83E72CD3EB3C00B5FF61 /* DocumentTakenDebtListView.swift in Sources */,
 				10F889932CAADBF600DB4899 /* DocumentIncomeListRowView.swift in Sources */,
+				10BB83EE2CD3EC1A00B5FF61 /* DocumentTakenDebtEditViewModel.swift in Sources */,
 				10FFB6C02CAAFB3D004A2A5C /* DocumentTransferListViewModel.swift in Sources */,
+				10BB83E92CD3EB4500B5FF61 /* DocumentTakenDebtListViewModel.swift in Sources */,
 				10F8897C2CAADBF600DB4899 /* CatalogCommonSelectListView.swift in Sources */,
 				10F889962CAADBF600DB4899 /* DocumentIncomeStateEditView.swift in Sources */,
 				10F889852CAADBF600DB4899 /* DecimalValueRow.swift in Sources */,
@@ -685,6 +727,7 @@
 				10F889812CAADBF600DB4899 /* CatalogStateIncomeListView.swift in Sources */,
 				10B12C632CC3CF7E00D79C55 /* DocumentReturnGiveoutDebtListRowView.swift in Sources */,
 				10F889652CAADBF600DB4899 /* CDDocumentIncome.swift in Sources */,
+				10BB83F02CD3EC2200B5FF61 /* DocumentTakenDebtEditView.swift in Sources */,
 				10F889702CAADBF600DB4899 /* Extensions.Decimal.swift in Sources */,
 				10F8897D2CAADBF600DB4899 /* CatalogDebtEditView.swift in Sources */,
 				10F889912CAADBF600DB4899 /* DocumentIncomeEditView.swift in Sources */,
@@ -699,6 +742,7 @@
 				10F889802CAADBF600DB4899 /* CatalogStateIncomeEditViewModel.swift in Sources */,
 				10F889732CAADBF600DB4899 /* Extensions.swift in Sources */,
 				10F889842CAADBF600DB4899 /* DecimalTextField.swift in Sources */,
+				10BB83EB2CD3EB9F00B5FF61 /* DocumentTakenDebtListRowView.swift in Sources */,
 				10F8896D2CAADBF600DB4899 /* StoreType.swift in Sources */,
 				10F889972CAADBF600DB4899 /* DocumentIncomeStateEditViewModel.swift in Sources */,
 				10F889792CAADBF600DB4899 /* CatalogCommonEditView.swift in Sources */,

@@ -46,6 +46,10 @@ struct MainView: View {
                         Text(ObjectType.documentReturnGiveoutDebt.listTitle)
                     }
                     
+                    NavigationLink(value: Coordinator.MainView.documentTakenDebt) {
+                        Text(ObjectType.documentTakenDebt.listTitle)
+                    }
+                    
                     
                 }
                 header: {
@@ -94,6 +98,10 @@ struct MainView: View {
                     DocumentGiveoutDebtListView(objectType: .documentGiveoutDebt, viewModel: DocumentGiveoutDebtListViewModel())
                 case .documentReturnGiveoutDebt:
                     DocumentReturnGiveoutDebtListView(objectType: .documentReturnGiveoutDebt, viewModel: DocumentReturnGiveoutDebtListViewModel())
+                case .documentTakenDebt:
+                    DocumentTakenDebtListView(objectType: .documentTakenDebt, viewModel: DocumentTakenDebtListViewModel())
+                case .documentReturnTakenDebt:
+                    EmptyView()
                 case .catalogStateIncome:
                     CatalogCommonListView<CDCatalogStateIncome>(objectType: .catalogStateIncome, viewModel: CatalogCommonListViewModel<CDCatalogStateIncome>())
                 case .catalogStateConsumption:
