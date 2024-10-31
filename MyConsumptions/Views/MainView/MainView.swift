@@ -19,6 +19,29 @@ struct MainView: View {
                 
                 Section {
                     
+                    ScrollView(.horizontal) {
+                                LazyHStack {
+                                    ForEach(0..<10) { i in
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .fill(Color(hue: Double(1) / 10, saturation: 1, brightness: 1).gradient)
+//                                            .frame(width: 300, height: 200)
+//                                            .frame(height: 200)
+//                                            .frame(minWidth: 200)
+                                            .frame(width: UIScreen.main.bounds.width - 100, height: 200)
+                                    }
+                                }
+                                .scrollTargetLayout()
+                            }
+                            .scrollTargetBehavior(.viewAligned)
+                            .contentMargins(20, for: .scrollContent) // Add padding
+//                            .safeAreaPadding(.horizontal, 40)
+                            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            .listRowBackground(Color.clear)
+                            .scrollIndicators(.never)
+                }
+                
+                Section {
+                    
                     NavigationLink(value: Coordinator.MainView.documentIncome) {
                         Text(ObjectType.documentIncome.listTitle)
                     }
@@ -128,4 +151,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(Coordinator())
 }
