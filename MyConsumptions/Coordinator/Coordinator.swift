@@ -117,4 +117,14 @@ extension Coordinator {
         case selectDebt
     }
     
+    enum DocumentReturnTakenDebtListView: Hashable {
+        case new
+        case edit(objectID: NSManagedObjectID)
+    }
+    
+    enum DocumentReturnTakenDebtEditView: Hashable {
+        case selectContact
+        case selectDebt
+    }
+    
 }

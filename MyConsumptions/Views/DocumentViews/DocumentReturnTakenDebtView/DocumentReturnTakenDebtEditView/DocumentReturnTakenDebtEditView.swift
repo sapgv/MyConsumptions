@@ -1,17 +1,17 @@
 //
-//  DocumentReturnGiveoutDebtEditView.swift
+//  DocumentReturnTakenDebtEditView.swift
 //  MyConsumptions
 //
-//  Created by Grigory Sapogov on 19.10.2024.
+//  Created by Grigory Sapogov on 31.10.2024.
 //
 
 import SwiftUI
 
-struct DocumentReturnGiveoutDebtEditView: View {
+struct DocumentReturnTakenDebtEditView: View {
     
     @EnvironmentObject var coordinator: Coordinator
     
-    @StateObject var viewModel: DocumentReturnGiveoutDebtEditViewModel
+    @StateObject var viewModel: DocumentReturnTakenDebtEditViewModel
     
     var objectType: ObjectType
     
@@ -23,7 +23,7 @@ struct DocumentReturnGiveoutDebtEditView: View {
             
                 DocumentDatePicker(date: $viewModel.cdDocument.date)
                 
-                NavigationLink(value: Coordinator.DocumentReturnGiveoutDebtEditView.selectContact) {
+                NavigationLink(value: Coordinator.DocumentReturnTakenDebtEditView.selectContact) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(viewModel.cdDocument.cdContact?.name ?? "")
                         Text("Контакт")
@@ -33,7 +33,7 @@ struct DocumentReturnGiveoutDebtEditView: View {
                 }
                 .listRowBackground(Color(UIColor.systemBackground))
                 
-                NavigationLink(value: Coordinator.DocumentReturnGiveoutDebtEditView.selectDebt) {
+                NavigationLink(value: Coordinator.DocumentReturnTakenDebtEditView.selectDebt) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(viewModel.cdDocument.cdDebt?.name ?? "")
                         Text("Кошелек куда")
@@ -47,7 +47,7 @@ struct DocumentReturnGiveoutDebtEditView: View {
             
             Section {
                 
-                DecimalValueRow(value: $viewModel.cdDocument.value, valueForegroundStyle: .income)
+                DecimalValueRow(value: $viewModel.cdDocument.value, valueForegroundStyle: .consumption)
                 
             }
             
@@ -76,7 +76,7 @@ struct DocumentReturnGiveoutDebtEditView: View {
             }
         }
         .navigationTitle(objectType.editTitle)
-        .navigationDestination(for: Coordinator.DocumentReturnGiveoutDebtEditView.self) { route in
+        .navigationDestination(for: Coordinator.DocumentReturnTakenDebtEditView.self) { route in
             switch route {
             case .selectContact:
                 CatalogCommonSelectListView<CDCatalogContact>(objectType: .catalogContact, selected: self.viewModel.cdDocument.cdContact) { cdContact in
@@ -93,7 +93,7 @@ struct DocumentReturnGiveoutDebtEditView: View {
 }
 
 #Preview {
-    let viewModel = DocumentReturnGiveoutDebtEditViewModel()
-    return DocumentReturnGiveoutDebtEditView(viewModel: viewModel, objectType: .documentReturnGiveoutDebt)
+    let viewModel = DocumentReturnTakenDebtEditViewModel()
+    return DocumentReturnTakenDebtEditView(viewModel: viewModel, objectType: .documentReturnTakenDebt)
 }
 
